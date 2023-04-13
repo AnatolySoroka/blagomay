@@ -47,5 +47,8 @@ $(document).ready(function () {
     centerMode: true,
     arrows: false,
     dots: true,
+    adaptiveHeight: true,
+    adaptiveWidth: true,
+    centerPadding: '0px',
   });
 });

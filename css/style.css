@@ -17,14 +17,14 @@ body {
   height: 100%;
 }
 
-body {
+/* body {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 176%;
   letter-spacing: 0.04em;
-}
+} */
 
 .wrapper {
   display: flex;
@@ -200,7 +200,10 @@ ul.sub-menu__list.show {
 
 .select-language .select-language__list {
   position: absolute;
-  top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: 40px;
   left: -10px;
   background-color: var(--white);
   padding: 16px;
@@ -280,6 +283,8 @@ header .container {
   border-radius: 50%;
 }
 
+/* HERO SECTION */
+
 .slider__item {
   position: relative;
   background: linear-gradient(
@@ -290,8 +295,10 @@ header .container {
     url("../img/test-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 700px;
-  max-height: 800px;
+  /* min-height: 700px;
+  max-height: 700px; */
+  height: 700px;
+  width: 100%;
   margin: auto;
   user-select: text;
 }
@@ -333,4 +340,48 @@ header .container {
   min-width: 200px;
   display: inline-block;
   border-radius: 6px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 0 9px;
+  /* background-color: #fff; */
+}
+
+.slick-dots li button {
+  font-size: 0;
+  border: none;
+  width: 13px;
+  height: 13px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.slick-dots .slick-active button {
+  background-color: var(--white);
+}
+
+.hero__text {
+  background-color: var(--mediumSeaGreen);
+  border-radius: 12px;
+  text-align: center;
+  max-width: 978px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  transform: translateY(-40px);
+}
+
+.hero__text p {
+  color: var(--white);
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
 }
