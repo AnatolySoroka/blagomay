@@ -1,13 +1,177 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Blagomay</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a class="header__logo-link" href="index.html">
+                <img src="img/logo.png" alt="logo" />
+              </a>
+              <img class="header__logo-img" src="img/logo-img.png" alt="logo" />
+            </div>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a class="menu__list-link has-sub" href="#">Про нас</a>
+                  <ul class="sub-menu__list">
+                    <li class="sub-menu__list-item">
+                      <a class="sub-menu__list-link" href="#">Команда</a>
+                    </li>
+                    <li class="sub-menu__list-item">
+                      <a class="sub-menu__list-link" href="#">ЗМІ про нас</a>
+                    </li>
+                    <li class="sub-menu__list-item">
+                      <a class="sub-menu__list-link" href="#">Відео</a>
+                    </li>
+                    <li class="sub-menu__list-item">
+                      <a class="sub-menu__list-link" href="#">Документи</a>
+                    </li>
+                    <li class="sub-menu__list-item">
+                      <a class="sub-menu__list-link" href="#"
+                        >Кому допомагаємо</a
+                      >
+                    </li>
+                    <li class="sub-menu__list-item">
+                      <a class="sub-menu__list-link" href="#">Новини</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">Програми</a>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">Приєднатися</a>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">Звіти</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="user-navigation">
+              <button class="search__btn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.024 15.8895L22.6938 21.7881C22.8637 21.9657 22.9778 22.1892 23.0219 22.4309C23.066 22.6727 23.0382 22.9221 22.942 23.1482C22.8458 23.3743 22.6853 23.5672 22.4805 23.7031C22.2757 23.8389 22.0356 23.9116 21.7898 23.9123C21.4448 23.9123 21.1239 23.7743 20.8847 23.527L15.1724 17.5847C13.5603 18.7224 11.6345 19.3309 9.66135 19.3259C4.3573 19.3259 0.0422974 15.0109 0.0422974 9.70682C0.0422974 4.40277 4.3573 0.0877686 9.66135 0.0877686C14.9654 0.0877686 19.2804 4.40277 19.2804 9.70682C19.2813 11.9697 18.4821 14.1601 17.024 15.8907V15.8895ZM16.771 9.70682C16.7689 7.82188 16.0191 6.01476 14.6863 4.6819C13.3534 3.34905 11.5463 2.59932 9.66135 2.59719C7.77641 2.59932 5.96929 3.34905 4.63643 4.6819C3.30358 6.01476 2.55385 7.82188 2.55172 9.70682C2.55385 11.5918 3.30358 13.3989 4.63643 14.7317C5.96929 16.0646 7.77641 16.8143 9.66135 16.8165C11.5463 16.8143 13.3534 16.0646 14.6863 14.7317C16.0191 13.3989 16.7689 11.5918 16.771 9.70682Z"
+                    fill="#C4C4C4"
+                  />
+                </svg>
+              </button>
+              <a class="help__btn" href="#">Допомогти</a>
+              <button class="select-language">
+                UA<svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_396_324)">
+                    <path
+                      d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                      fill="black"
+                      stroke="black"
+                      stroke-width="0.4"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_396_324">
+                      <rect
+                        width="15"
+                        height="15"
+                        fill="white"
+                        transform="translate(0.542297 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <ul class="select-language__list">
+                  <li class="select-language__list-item">UA</li>
+                  <li class="select-language__list-item">EN</li>
+                </ul>
+              </button>
+              <a class="user-login" href="#"
+                ><svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.0428 15.6557C17.4844 15.6557 19.464 13.7179 19.464 11.3279C19.464 8.93784 17.4844 7 15.0428 7C12.6012 7 10.6216 8.93784 10.6216 11.3279C10.6242 13.7169 12.6023 15.6531 15.0422 15.6557H15.0428ZM15.0428 8.31148C16.7448 8.31148 18.1242 9.66177 18.1242 11.3279C18.1242 12.994 16.7448 14.3443 15.0428 14.3443C13.3407 14.3443 11.9613 12.994 11.9613 11.3279C11.9635 9.66282 13.3418 8.31357 15.0428 8.31148ZM23.0267 22.2047C22.1939 18.5829 18.9361 15.918 15.0422 15.918C11.1483 15.918 7.89057 18.583 7.06796 22.1512L7.05778 22.2047C7.04813 22.2467 7.04224 22.2949 7.04224 22.3443C7.04224 22.7062 7.34234 23 7.71212 23C8.03152 23 8.29893 22.7807 8.36592 22.488L8.367 22.4838C9.06421 19.4569 11.7877 17.2295 15.0428 17.2295C18.2979 17.2295 21.0208 19.4564 21.7094 22.4387L21.718 22.4833C21.7855 22.7802 22.0519 22.9995 22.3713 22.9995C22.4222 22.9995 22.4715 22.9937 22.5192 22.9832L22.5149 22.9843C22.8188 22.9187 23.0422 22.6574 23.0422 22.3448C23.0422 22.2949 23.0363 22.2467 23.0256 22.2L23.0267 22.2047Z"
+                    fill="#CBCBCB"
+                    stroke="#C4C4C4"
+                  />
+                  <rect
+                    x="1.04224"
+                    y="1"
+                    width="28"
+                    height="28"
+                    rx="14"
+                    stroke="#C4C4C4"
+                    stroke-width="2"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="form__wrapper">
+              <form class="form">
+                <input class="form__search-input" type="text" />
+                <input class="form__search-btn" type="submit" value="" />
+              </form>
+              <button class="close-search">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.172419 11.8276C-0.0574729 11.5977 -0.0574729 11.225 0.172419 10.9951L10.9951 0.172419C11.225 -0.0574727 11.5977 -0.0574725 11.8276 0.172419C12.0575 0.402311 12.0575 0.775039 11.8276 1.00493L1.00493 11.8276C0.775038 12.0575 0.402311 12.0575 0.172419 11.8276Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M0.17242 0.172419C0.402311 -0.0574729 0.77504 -0.0574729 1.00493 0.172419L11.8276 10.9951C12.0575 11.225 12.0575 11.5977 11.8276 11.8276C11.5977 12.0575 11.225 12.0575 10.9951 11.8276L0.172419 1.00493C-0.0574722 0.775038 -0.057472 0.402311 0.17242 0.172419Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container"></div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
