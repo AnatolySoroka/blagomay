@@ -4,8 +4,8 @@ const refs = {
   headerBottom: document.querySelector(".header__bottom"),
   closeSearch: document.querySelector(".close-search"),
   searchBtn: document.querySelector(".search__btn"),
-  selectLanguage: document.querySelector('.select-language'),
-  selectLanguageMenu: document.querySelector('.select-language__list'),
+  selectLanguage: document.querySelector(".select-language"),
+  selectLanguageMenu: document.querySelector(".select-language__list"),
 };
 
 // select language
@@ -20,7 +20,6 @@ window.addEventListener("click", function (event) {
     refs.selectLanguage.classList.remove("active");
   }
 });
-
 
 // dropdown menu
 refs.dropdownToggle.addEventListener("click", function () {
@@ -41,4 +40,12 @@ refs.searchBtn.addEventListener("click", function () {
 });
 refs.closeSearch.addEventListener("click", function () {
   refs.headerBottom.classList.remove("show");
+});
+
+$(document).ready(function () {
+  $(".slider").slick({
+    centerMode: true,
+    arrows: false,
+    dots: true,
+  });
 });
