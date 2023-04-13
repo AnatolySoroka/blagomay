@@ -17,14 +17,10 @@ body {
   height: 100%;
 }
 
-/* body {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 176%;
-  letter-spacing: 0.04em;
-} */
+body {
+  font-family: "Open Sans";
+  color: var(--black);
+}
 
 .wrapper {
   display: flex;
@@ -285,6 +281,10 @@ header .container {
 
 /* HERO SECTION */
 
+.hero {
+  background-color: var(--lightGray);
+}
+
 .slider__item {
   position: relative;
   background: linear-gradient(
@@ -350,7 +350,6 @@ header .container {
   display: flex;
   justify-content: center;
   gap: 0 9px;
-  /* background-color: #fff; */
 }
 
 .slick-dots li button {
@@ -384,4 +383,80 @@ header .container {
   font-weight: 400;
   font-size: 22px;
   line-height: 30px;
+}
+
+/* ASSIST SECTION */
+
+.assist {
+  padding: 30px 0 60px;
+  background-color: var(--lightGray);
+}
+
+.assist__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--black);
+}
+
+.assist__item {
+  max-width: 380px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--white);
+}
+
+.assist__item-title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--black);
+  margin: 10px 0;
+}
+
+.assist__item-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.assist__item-text span {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.assist__item-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.assist__item-buttons .help__btn {
+  display: inline-block;
+  margin: 0;
+}
+
+.assist__item-buttons .details__btn {
+  display: inline-block;
+  background-color: #f0f4f6;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  display: grid;
+  place-items: center;
+  color: var(--black);
+  padding: 11px 30px;
+  border-radius: 6px;
 }
