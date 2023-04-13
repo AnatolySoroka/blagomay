@@ -4,8 +4,25 @@ const refs = {
   headerBottom: document.querySelector(".header__bottom"),
   closeSearch: document.querySelector(".close-search"),
   searchBtn: document.querySelector(".search__btn"),
+  selectLanguage: document.querySelector('.select-language'),
+  selectLanguageMenu: document.querySelector('.select-language__list'),
 };
 
+// select language
+refs.selectLanguage.addEventListener("click", function () {
+  refs.selectLanguageMenu.classList.toggle("show");
+  refs.selectLanguage.classList.toggle("active");
+});
+
+window.addEventListener("click", function (event) {
+  if (!event.target.matches(".select-language")) {
+    refs.selectLanguageMenu.classList.remove("show");
+    refs.selectLanguage.classList.remove("active");
+  }
+});
+
+
+// dropdown menu
 refs.dropdownToggle.addEventListener("click", function () {
   refs.dropdownMenu.classList.toggle("show");
   refs.dropdownToggle.classList.toggle("active");
@@ -18,9 +35,10 @@ window.addEventListener("click", function (event) {
   }
 });
 
+// search input
 refs.searchBtn.addEventListener("click", function () {
   refs.headerBottom.classList.toggle("show");
 });
 refs.closeSearch.addEventListener("click", function () {
-    refs.headerBottom.classList.remove("show");
+  refs.headerBottom.classList.remove("show");
 });

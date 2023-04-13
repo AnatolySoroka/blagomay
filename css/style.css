@@ -177,17 +177,42 @@ ul.sub-menu__list.show {
 }
 
 .select-language {
-  margin-right: 29px;
+  position: relative;
+  margin-right: 46px;
   display: flex;
   align-items: center;
 }
 
-.select-language svg {
-  margin-left: 10px;
+.select-language::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/chevron.svg");
+  width: 16px;
+  height: 16px;
+  top: 16px;
+  right: -20px;
+  transition: all 0.2s ease;
+}
+
+.select-language.active::after {
+  transform: rotate(90deg);
 }
 
 .select-language .select-language__list {
-  display: none;
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  background-color: var(--white);
+  padding: 16px;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select-language .select-language__list.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
 }
 
 header .container {
@@ -216,7 +241,7 @@ header .container {
 }
 
 .form {
-  margin-left: 240px;
+  margin-left: 233px;
   max-width: 685px;
   position: relative;
   flex-grow: 1;
