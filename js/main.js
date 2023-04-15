@@ -43,12 +43,32 @@ refs.closeSearch.addEventListener("click", function () {
 });
 
 $(document).ready(function () {
-  $(".slider").slick({
+  $("#hero-slider").slick({
     centerMode: true,
     arrows: false,
     dots: true,
     adaptiveHeight: true,
     adaptiveWidth: true,
+    centerPadding: '0px',
+  });
+});
+
+$(document).ready(function () {
+  $(".partners__slider").slick({
+    centerMode: true,
+    dots: true,
+    // adaptiveHeight: true,
+    // adaptiveWidth: true,
+    centerPadding: '0px',
+  });
+});
+
+$(document).ready(function () {
+  $(".charity__slider").slick({
+    centerMode: true,
+    dots: true,
+    // adaptiveHeight: true,
+    // adaptiveWidth: true,
     centerPadding: '0px',
   });
 });
