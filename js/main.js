@@ -6,7 +6,27 @@ const refs = {
   searchBtn: document.querySelector(".search__btn"),
   selectLanguage: document.querySelector(".select-language"),
   selectLanguageMenu: document.querySelector(".select-language__list"),
+  burgerBtn: document.querySelector('.burger-button'),
+  mobileMenu: document.querySelector('.header__mobile'),
 };
+
+console.log(refs.burgerBtn)
+console.log(refs.mobileMenu)
+
+// mobile menu
+
+refs.burgerBtn.addEventListener('click', showMobileMenu)
+
+function showMobileMenu() {
+  refs.burgerBtn.classList.toggle('active');
+  refs.mobileMenu.classList.toggle('show');
+  if (refs.mobileMenu.classList.contains('show')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+
+  }
+}
 
 // select language
 refs.selectLanguage.addEventListener("click", function () {
@@ -22,6 +42,7 @@ window.addEventListener("click", function (event) {
 });
 
 // dropdown menu
+
 refs.dropdownToggle.addEventListener("click", function () {
   refs.dropdownMenu.classList.toggle("show");
   refs.dropdownToggle.classList.toggle("active");
