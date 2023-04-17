@@ -664,9 +664,9 @@ header .container {
 
 .achievement__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px 40px;
 }
 
 .achievement__item {
@@ -689,6 +689,15 @@ header .container {
 .achievement__item b span {
   font-size: 24px;
   line-height: 32px;
+}
+
+.achievement__item p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
 }
 
 /* NEWS SECTION */
@@ -746,7 +755,7 @@ header .container {
   color: var(--white);
 }
 
-.card-content h2 {
+.card-content h4 {
   font-family: "Open Sans";
   font-weight: 700;
   font-size: 20px;
@@ -971,6 +980,11 @@ div.partners__slider-item {
 .footer__col-contacts a {
   color: var(--gold);
   display: block;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 /* .footer__col-charity {
@@ -1057,6 +1071,9 @@ div.partners__slider-item {
   .hero__text {
     border-radius: 0px;
   }
+  .news__list {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1115,6 +1132,57 @@ div.partners__slider-item {
   }
   .assist__item-buttons .details__btn {
     padding: 9px;
+  }
+  .hero__text p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .hero__text {
+    padding: 30px 0px;
+  }
+  .assist__item-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .assist__item-text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .assist__item-text span {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .achievement {
+    padding: 40px 0;
+  }
+  .achievement__item {
+    max-width: 100%;
+  }
+  .achievement__item svg {
+    width: 70px;
+    height: 70px;
+  }
+  .achievement__item b {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 20px 42px;
+  }
+  .achievement__item b span {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .achievement__item p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .news {
+    padding: 40px 0;
+  }
+  .partners {
+    padding: 40px 0;
+  }
+  .charity {
+    padding: 40px 0 103px;
   }
 }
 
