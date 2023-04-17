@@ -1142,6 +1142,12 @@ ul.social__list {
     min-width: 130px;
     margin: 0;
   }
+  .partners__logo {
+    min-height: 120px;
+    max-width: 130px;
+    display: grid;
+    place-items: center;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1196,7 +1202,6 @@ ul.social__list {
   .assist__item-buttons a {
     min-width: 118px;
   }
-
   .assist__item-buttons .help__btn {
     padding: 9px 13px;
   }
@@ -1259,6 +1264,12 @@ ul.social__list {
   }
   .map {
     padding: 40px 0;
+  }
+  .partners__logo {
+    margin: 0 auto;
+  }
+  .partners__logo img {
+    width: 110px;
   }
 }
 

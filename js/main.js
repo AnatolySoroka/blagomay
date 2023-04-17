@@ -70,6 +70,7 @@ $(document).ready(function () {
     adaptiveHeight: true,
     adaptiveWidth: true,
     centerPadding: "0px",
+    autoplay: true,
   });
 });
 
@@ -79,10 +80,35 @@ $(document).ready(function () {
     centerMode: true,
     dots: true,
     centerPadding: "0px",
-    // slidesToScroll: 200,
-    rows: 1,
+    rows: 2,
     slidesToShow: 5,
+    slidesToScroll: 5,
+    // autoplay: true,
     // slidesPerRow: 1,
+    responsive: [
+      {
+        breakpoint: 1090,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          arrows: false,
+        }
+      }
+    ]
   });
 
   // function resizeSlider() {
