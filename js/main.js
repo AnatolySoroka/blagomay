@@ -87,21 +87,21 @@ $(document).ready(function () {
     // slidesPerRow: 1,
     responsive: [
       {
-        breakpoint: 1090,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 3,
         }
       },
       {
-        breakpoint: 920,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         }
       },
       {
-        breakpoint: 680,
+        breakpoint: 840,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 3,
@@ -134,6 +134,32 @@ $(document).ready(function () {
     centerMode: true,
     dots: true,
     centerPadding: "0px",
+    rows: 3,
+    slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 840,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          arrows: false,
+        }
+      }
+    ]
   });
 });
 

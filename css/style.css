@@ -858,16 +858,26 @@ ul.sub-menu__list.show {
   gap: 50px 36px;
 } */
 
+.charity__slider {
+  padding: 0 70px;
+}
+
 .charity__slider-item {
-  padding: 0 76px;
+  width: 180px;
+  height: 100px;
   display: grid !important;
+  place-items: center;
+  /* display: flex; */
+  /* gap: 30px; */
+  /* display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-template-rows: repeat(3, 1fr);
-  gap: 30px;
+  gap: 30px; */
 }
 .partners__slider {
   position: relative;
   margin-bottom: 36px;
+  padding: 0 65px;
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
@@ -951,6 +961,7 @@ ul.sub-menu__list.show {
   background-repeat: no-repeat;
   background-position: center center;
   z-index: 10;
+  left: 0;
 }
 
 .partners__slider .slick-next,
@@ -1143,10 +1154,16 @@ ul.social__list {
     margin: 0;
   }
   .partners__logo {
-    min-height: 120px;
+    min-height: 160px;
     max-width: 130px;
     display: grid;
     place-items: center;
+  }
+  .partners__slider {
+    padding: 0;
+  }
+  .charity__slider {
+    padding: 0;
   }
 }
 
@@ -1267,8 +1284,15 @@ ul.social__list {
   }
   .partners__logo {
     margin: 0 auto;
+    min-height: 100px;
   }
   .partners__logo img {
+    width: 110px;
+  }
+  .partners__slider .slick-dots {
+    bottom: -30px;
+  }
+  .charity__logo img {
     width: 110px;
   }
 }
