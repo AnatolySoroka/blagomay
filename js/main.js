@@ -1,5 +1,5 @@
 const refs = {
-  dropdownToggle: document.querySelector(".has-sub"),
+  dropdownToggle: document.querySelectorAll(".has-sub"),
   dropdownMenu: document.querySelector(".sub-menu__list"),
   headerBottom: document.querySelector(".header__bottom"),
   closeSearch: document.querySelector(".close-search"),
@@ -9,9 +9,6 @@ const refs = {
   burgerBtn: document.querySelector(".burger-button"),
   mobileMenu: document.querySelector(".header__mobile"),
 };
-
-console.log(refs.burgerBtn);
-console.log(refs.mobileMenu);
 
 // mobile menu
 
@@ -42,16 +39,18 @@ window.addEventListener("click", function (event) {
 
 // dropdown menu
 
-refs.dropdownToggle.addEventListener("click", function () {
-  refs.dropdownMenu.classList.toggle("show");
-  refs.dropdownToggle.classList.toggle("active");
-});
+refs.dropdownToggle.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("active");
+    item.nextElementSibling.classList.toggle("show");
 
-window.addEventListener("click", function (event) {
-  if (!event.target.matches(".has-sub")) {
-    refs.dropdownMenu.classList.remove("show");
-    refs.dropdownToggle.classList.remove("active");
-  }
+    window.addEventListener("click", function (event) {
+      if (!event.target.matches(".has-sub")) {
+        item.classList.remove("active");
+        item.nextElementSibling.classList.remove("show");
+      }
+    });
+  });
 });
 
 // search input
@@ -62,6 +61,7 @@ refs.closeSearch.addEventListener("click", function () {
   refs.headerBottom.classList.remove("show");
 });
 
+// hero slider
 $(document).ready(function () {
   $("#hero-slider").slick({
     centerMode: true,
@@ -73,26 +73,45 @@ $(document).ready(function () {
   });
 });
 
+// partners slider
 $(document).ready(function () {
   $(".partners__slider").slick({
     centerMode: true,
     dots: true,
-    // adaptiveHeight: true,
-    // adaptiveWidth: true,
     centerPadding: "0px",
+    // slidesToScroll: 200,
+    rows: 1,
+    slidesToShow: 5,
+    // slidesPerRow: 1,
   });
+
+  // function resizeSlider() {
+  //   let windowWidth = $(window).width();
+  //   let slidesToShow = windowWidth < 768 ? 4 : 4;
+  //   $(".partners__slider").slick(
+  //     "slickSetOption",
+  //     "slidesToShow",
+  //     slidesToShow
+  //   );
+  // }
+
+  // $(window).on("resize", function () {
+  //   resizeSlider();
+  // });
+
+  // resizeSlider();
 });
 
+// charity slider
 $(document).ready(function () {
   $(".charity__slider").slick({
     centerMode: true,
     dots: true,
-    // adaptiveHeight: true,
-    // adaptiveWidth: true,
     centerPadding: "0px",
   });
 });
 
+// news resize
 const list = document.querySelector(".news__list");
 
 function resize() {

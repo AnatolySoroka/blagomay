@@ -20,7 +20,7 @@ body {
 body {
   font-family: "Open Sans";
   color: var(--black);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -134,7 +134,7 @@ button {
 
 .menu-mobile .menu__list .menu__list-item .menu__list-link.has-sub::after {
   left: 80px;
-  top: 2px;
+  top: 3px;
   right: -10px;
 }
 
@@ -248,7 +248,7 @@ a.help__btn-mobile {
   background-image: url("../img/chevron.svg");
   width: 16px;
   height: 16px;
-  top: 5px;
+  top: 4px;
   right: -10px;
   transition: all 0.2s ease;
 }
@@ -259,7 +259,7 @@ a.help__btn-mobile {
 
 ul.sub-menu__list {
   position: absolute;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10px 0;
   min-width: 180px;
@@ -270,8 +270,20 @@ ul.sub-menu__list {
   opacity: 0;
   visibility: hidden;
 }
+ul.sub-menu__list-mobile {
+  position: static;
+}
+
+ul.sub-menu__list-mobile.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  padding-bottom: 0;
+  gap: 16px;
+}
 
 ul.sub-menu__list.show {
+  display: flex;
   opacity: 1;
   visibility: visible;
   z-index: 10;
@@ -659,8 +671,8 @@ ul.sub-menu__list.show {
       rgba(0, 135, 52, 0.9)
     ),
     url("../img/test-img.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .achievement__title {
@@ -757,14 +769,17 @@ ul.sub-menu__list.show {
 
 .gradient-img {
   position: absolute;
-  left: 0;top: 0;right: 0;bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background-size: cover;
   background-position: center;
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 16.98%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
+    180deg,
+    rgba(0, 0, 0, 0) 16.98%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
 
 .card:hover .card-image {
@@ -853,15 +868,22 @@ ul.sub-menu__list.show {
 .partners__slider {
   position: relative;
   margin-bottom: 36px;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
 }
 
+/* .partners__slider {
+
+} */
+
 /* div.charity__slider-item  */
-div.partners__slider-item {
+/* div.partners__slider-item {
   display: flex !important;
   justify-content: center;
   gap: 0 36px;
   flex-wrap: wrap;
-}
+} */
 
 .charity__logo {
   display: grid;
@@ -1098,14 +1120,17 @@ ul.social__list {
   } */
 }
 
+@media (max-width: 970px) {
+  .hero__text {
+    border-radius: 0px;
+  }
+}
+
 @media (max-width: 768px) {
   .offer__title {
     max-width: 500px;
     font-size: 32px;
     line-height: 42px;
-  }
-  .hero__text {
-    border-radius: 0px;
   }
   .news__list {
     justify-content: center;
@@ -1234,7 +1259,7 @@ ul.social__list {
   }
   .map {
     padding: 40px 0;
-}
+  }
 }
 
 @media (max-width: 320px) {
