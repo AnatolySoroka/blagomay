@@ -6,25 +6,24 @@ const refs = {
   searchBtn: document.querySelector(".search__btn"),
   selectLanguage: document.querySelector(".select-language"),
   selectLanguageMenu: document.querySelector(".select-language__list"),
-  burgerBtn: document.querySelector('.burger-button'),
-  mobileMenu: document.querySelector('.header__mobile'),
+  burgerBtn: document.querySelector(".burger-button"),
+  mobileMenu: document.querySelector(".header__mobile"),
 };
 
-console.log(refs.burgerBtn)
-console.log(refs.mobileMenu)
+console.log(refs.burgerBtn);
+console.log(refs.mobileMenu);
 
 // mobile menu
 
-refs.burgerBtn.addEventListener('click', showMobileMenu)
+refs.burgerBtn.addEventListener("click", showMobileMenu);
 
 function showMobileMenu() {
-  refs.burgerBtn.classList.toggle('active');
-  refs.mobileMenu.classList.toggle('show');
-  if (refs.mobileMenu.classList.contains('show')) {
-    document.body.style.overflow = 'hidden';
+  refs.burgerBtn.classList.toggle("active");
+  refs.mobileMenu.classList.toggle("show");
+  if (refs.mobileMenu.classList.contains("show")) {
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = '';
-
+    document.body.style.overflow = "";
   }
 }
 
@@ -70,7 +69,7 @@ $(document).ready(function () {
     dots: true,
     adaptiveHeight: true,
     adaptiveWidth: true,
-    centerPadding: '0px',
+    centerPadding: "0px",
   });
 });
 
@@ -80,7 +79,7 @@ $(document).ready(function () {
     dots: true,
     // adaptiveHeight: true,
     // adaptiveWidth: true,
-    centerPadding: '0px',
+    centerPadding: "0px",
   });
 });
 
@@ -90,6 +89,24 @@ $(document).ready(function () {
     dots: true,
     // adaptiveHeight: true,
     // adaptiveWidth: true,
-    centerPadding: '0px',
+    centerPadding: "0px",
   });
 });
+
+const list = document.querySelector(".news__list");
+
+function resize() {
+  const width = window.innerWidth;
+  const itemsToShow = width < 931 ? 6 : 12;
+  const items = list.querySelectorAll(".news__list-item");
+  for (let i = 0; i < items.length; i++) {
+    if (i < itemsToShow) {
+      items[i].style.display = "block";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+
+resize();
+window.addEventListener("resize", resize);

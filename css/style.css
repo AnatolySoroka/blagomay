@@ -20,6 +20,7 @@ body {
 body {
   font-family: "Open Sans";
   color: var(--black);
+  /* overflow-x: hidden; */
 }
 
 .wrapper {
@@ -187,6 +188,10 @@ a.help__btn-mobile {
 
 .header {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .header__inner {
@@ -228,6 +233,7 @@ a.help__btn-mobile {
   color: var(--black);
   white-space: nowrap;
 }
+
 .menu__list-link svg {
   margin-left: 9px;
 }
@@ -321,6 +327,7 @@ ul.sub-menu__list.show {
   margin-right: 46px;
   display: flex;
   align-items: center;
+  color: var(--black);
 }
 
 .select-language::after {
@@ -350,16 +357,13 @@ ul.sub-menu__list.show {
   border-radius: 6px;
   opacity: 0;
   visibility: hidden;
+  color: var(--black);
 }
 
 .select-language .select-language__list.show {
   opacity: 1;
   visibility: visible;
   z-index: 10;
-}
-
-header .container {
-  position: relative;
 }
 
 .header__bottom {
@@ -372,6 +376,7 @@ header .container {
   padding: 20px 0;
   border-top: 1px solid var(--lightGray);
   background-color: var(--white);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
 }
 
 .header__bottom.show {
@@ -448,8 +453,8 @@ header .container {
 }
 
 .offer {
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
   margin-top: 210px;
 }
 
@@ -464,9 +469,14 @@ header .container {
   margin-bottom: 59px;
 }
 
+.offer__btn {
+  display: flex;
+  gap: 0 30px;
+}
+
 .offer__btn .help__btn {
-  margin: 0 30px 0 0;
-  padding: 16.5px 20px;
+  margin: 0;
+  padding: 16.5px 10px;
   min-width: 200px;
   display: inline-block;
 }
@@ -480,7 +490,7 @@ header .container {
   line-height: 22px;
   text-align: center;
   color: var(--black);
-  padding: 16.5px 20px;
+  padding: 16.5px 10px;
   min-width: 200px;
   display: inline-block;
   border-radius: 6px;
@@ -649,6 +659,8 @@ header .container {
       rgba(0, 135, 52, 0.9)
     ),
     url("../img/test-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .achievement__title {
@@ -708,6 +720,7 @@ header .container {
 
 .news__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -729,17 +742,29 @@ header .container {
 }
 
 .card-image {
+  position: relative;
   width: 100%;
   height: 100%;
+  /* background-size: cover;
+  background-position: center;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 16.98%,
+      rgba(0, 0, 0, 0.7) 100%
+    ); */
+  transition: transform 0.4s ease;
+}
+
+.gradient-img {
+  position: absolute;
+  left: 0;top: 0;right: 0;bottom: 0;
   background-size: cover;
   background-position: center;
   background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 16.98%,
       rgba(0, 0, 0, 0.7) 100%
-    ),
-    url("../img/news-img.png");
-  transition: transform 0.4s ease;
+    );
 }
 
 .card:hover .card-image {
@@ -748,7 +773,7 @@ header .container {
 
 .card-content {
   position: absolute;
-  top: 152px;
+  top: 147px;
   left: 0;
   right: 0;
   padding: 16px;
@@ -949,6 +974,17 @@ div.partners__slider-item {
   max-width: 284px;
 }
 
+ul.social__list {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.social__list-item .social__list-link svg {
+  width: 30px;
+  height: 30px;
+}
+
 .footer__nav {
   display: flex;
   flex-direction: column;
@@ -1075,6 +1111,13 @@ div.partners__slider-item {
     justify-content: center;
   }
 }
+@media (max-width: 550px) {
+  .offer__btn .help__btn,
+  .offer__btn .more__btn {
+    min-width: 130px;
+    margin: 0;
+  }
+}
 
 @media (max-width: 425px) {
   .offer {
@@ -1088,6 +1131,7 @@ div.partners__slider-item {
   }
   .header__logo {
     margin-right: 25px;
+    gap: 0 9px;
   }
   .header__logo-img {
     width: 33px;
@@ -1101,10 +1145,11 @@ div.partners__slider-item {
   .select-language {
     margin-right: 44px;
   }
-  .offer__btn .help__btn,
+  /* .offer__btn .help__btn,
   .offer__btn .more__btn {
     min-width: 130px;
-  }
+    margin: 0;
+  } */
   .hero .slider {
     height: 601px;
   }
@@ -1184,6 +1229,12 @@ div.partners__slider-item {
   .charity {
     padding: 40px 0 103px;
   }
+  .offer__btn {
+    gap: 0 20px;
+  }
+  .map {
+    padding: 40px 0;
+}
 }
 
 @media (max-width: 320px) {
