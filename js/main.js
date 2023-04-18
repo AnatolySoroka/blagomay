@@ -10,6 +10,25 @@ const refs = {
   mobileMenu: document.querySelector(".header__mobile"),
 };
 
+
+// var iFrameID = document.getElementById('.frame');
+// if (iFrameID) {
+//   // here you can make the height, I delete it first, then I make it again
+//   iFrameID.height = "";
+//   iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+// }
+
+$(function () {
+  var iframe = $('.frame', parent.document.body);
+  iframe.height($(document.body).height());
+});
+
+// $(function () {
+//   var iframe = $('.frame', parent.document.body);
+//   iframe.height($(document.body).height());
+// });
+
+
 // mobile menu
 
 refs.burgerBtn.addEventListener("click", showMobileMenu);
@@ -61,6 +80,49 @@ refs.closeSearch.addEventListener("click", function () {
   refs.headerBottom.classList.remove("show");
 });
 
+document.addEventListener('click', function (event) {
+  let isClickInsideHeader = event.target.closest('.header');
+  let isClickInsideShow = event.target.closest('.show');
+  let isClickInsideButton = event.target.closest('.header__button');
+  if (!isClickInsideHeader && !isClickInsideShow && !isClickInsideButton) {
+    // клік відбувся поза межами .header, .show та .header__button
+    // Приховуємо елемент .show
+    document.querySelector('.show').classList.remove('show');
+  }
+});
+
+
+// Отримуємо посилання на елемент headerBottom
+// var headerBottom = document.querySelector('.header-bottom');
+
+// Додаємо обробник подій на всю сторінку
+// document.addEventListener('click', function (event) {
+//   let isClickInsideHeaderBottom = refs.headerBottom.contains(event.target);
+
+// Якщо клік відбувається поза межами headerBottom, видаляємо клас "show"
+//   if (!isClickInsideHeaderBottom) {
+//     refs.headerBottom.classList.remove('show');
+//   }
+// });
+
+// Додаємо обробник подій на кнопку пошуку
+// refs.searchBtn.addEventListener('click', function () {
+//   refs.headerBottom.classList.toggle('show');
+// });
+
+// Додаємо обробник подій на кнопку закриття пошуку
+// refs.closeSearch.addEventListener('click', function () {
+//   refs.headerBottom.classList.remove('show');
+// });
+
+/////
+// window.addEventListener("click", function (event) {
+//   if (!event.target.matches(".header__bottom")) {
+//     refs.headerBottom.classList.remove("show");
+//   }
+// });
+
+
 // hero slider
 $(document).ready(function () {
   $("#hero-slider").slick({
@@ -83,7 +145,7 @@ $(document).ready(function () {
     rows: 2,
     slidesToShow: 5,
     slidesToScroll: 5,
-    // autoplay: true,
+    autoplay: true,
     // slidesPerRow: 1,
     responsive: [
       {
@@ -110,22 +172,6 @@ $(document).ready(function () {
       }
     ]
   });
-
-  // function resizeSlider() {
-  //   let windowWidth = $(window).width();
-  //   let slidesToShow = windowWidth < 768 ? 4 : 4;
-  //   $(".partners__slider").slick(
-  //     "slickSetOption",
-  //     "slidesToShow",
-  //     slidesToShow
-  //   );
-  // }
-
-  // $(window).on("resize", function () {
-  //   resizeSlider();
-  // });
-
-  // resizeSlider();
 });
 
 // charity slider
@@ -136,6 +182,7 @@ $(document).ready(function () {
     centerPadding: "0px",
     rows: 3,
     slidesToShow: 5,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1200,
