@@ -833,7 +833,6 @@ ul.sub-menu__list.show {
 
 .map iframe {
   width: 100%;
-  min-height: 1100px;
   /* height: 100vh; */
 }
 
