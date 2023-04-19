@@ -11,18 +11,6 @@ const refs = {
 };
 
 
-// var iFrameID = document.getElementById('.frame');
-// if (iFrameID) {
-//   // here you can make the height, I delete it first, then I make it again
-//   iFrameID.height = "";
-//   iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-// }
-
-$(function () {
-  var iframe = $('.frame', parent.document.body);
-  iframe.height($(document.body).height());
-});
-
 // $(function () {
 //   var iframe = $('.frame', parent.document.body);
 //   iframe.height($(document.body).height());
@@ -90,37 +78,6 @@ document.addEventListener('click', function (event) {
     document.querySelector('.show').classList.remove('show');
   }
 });
-
-
-// Отримуємо посилання на елемент headerBottom
-// var headerBottom = document.querySelector('.header-bottom');
-
-// Додаємо обробник подій на всю сторінку
-// document.addEventListener('click', function (event) {
-//   let isClickInsideHeaderBottom = refs.headerBottom.contains(event.target);
-
-// Якщо клік відбувається поза межами headerBottom, видаляємо клас "show"
-//   if (!isClickInsideHeaderBottom) {
-//     refs.headerBottom.classList.remove('show');
-//   }
-// });
-
-// Додаємо обробник подій на кнопку пошуку
-// refs.searchBtn.addEventListener('click', function () {
-//   refs.headerBottom.classList.toggle('show');
-// });
-
-// Додаємо обробник подій на кнопку закриття пошуку
-// refs.closeSearch.addEventListener('click', function () {
-//   refs.headerBottom.classList.remove('show');
-// });
-
-/////
-// window.addEventListener("click", function (event) {
-//   if (!event.target.matches(".header__bottom")) {
-//     refs.headerBottom.classList.remove("show");
-//   }
-// });
 
 
 // hero slider

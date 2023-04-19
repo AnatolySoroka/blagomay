@@ -831,6 +831,7 @@ ul.sub-menu__list.show {
 
 .map iframe {
   width: 100%;
+  min-height: 1100px;
   /* height: 100vh; */
 }
 
@@ -1278,8 +1279,8 @@ ul.social__list {
 }
 
 .footer__btn:hover {
-  border-color: #ffe609;
-  color: #ffe609;
+  background-color: #ffe609;
+  color: var(--black);
 }
 
 .footer__btn {
