@@ -11,10 +11,10 @@ const refs = {
 };
 
 
-$(function () {
-  var iframe = $('.frame', parent.document.body);
-  iframe.height($(document.body).height());
-});
+// $(function () {
+//   var iframe = $('.frame', parent.document.body);
+//   iframe.height($(document.body).height());
+// });
 
 
 // mobile menu
