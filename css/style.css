@@ -143,6 +143,7 @@ button {
   -ms-transform: translateY(0%);
   transform: translateY(0%);
   height: 100vh;
+  overflow-y: auto;
 }
 
 .header__mobile-inner {
@@ -156,6 +157,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-bottom: 70px;
 }
 
 .menu-mobile .menu__list {
