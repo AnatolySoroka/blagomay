@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Selected program page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <a class="header__logo-link" href="index.html">
+                            <img src="../img/logo.png" alt="logo" />
+                        </a>
+                        <img class="header__logo-img" src="../img/logo-img.png" alt="logo" />
+                    </div>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link has-sub" href="#">Про нас</a>
+                                <ul class="sub-menu__list">
+                                    <li class="sub-menu__list-item">
+                                        <a class="sub-menu__list-link" href="#">Команда</a>
+                                    </li>
+                                    <li class="sub-menu__list-item">
+                                        <a class="sub-menu__list-link" href="#">ЗМІ про нас</a>
+                                    </li>
+                                    <li class="sub-menu__list-item">
+                                        <a class="sub-menu__list-link" href="#">Відео</a>
+                                    </li>
+                                    <li class="sub-menu__list-item">
+                                        <a class="sub-menu__list-link" href="#">Документи</a>
+                                    </li>
+                                    <li class="sub-menu__list-item">
+                                        <a class="sub-menu__list-link" href="#">Кому допомагаємо</a>
+                                    </li>
+                                    <li class="sub-menu__list-item">
+                                        <a class="sub-menu__list-link" href="#">Новини</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">Програми</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">Приєднатися</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">Звіти</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="user-navigation">
+                        <button class="search__btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.024 15.8895L22.6938 21.7881C22.8637 21.9657 22.9778 22.1892 23.0219 22.4309C23.066 22.6727 23.0382 22.9221 22.942 23.1482C22.8458 23.3743 22.6853 23.5672 22.4805 23.7031C22.2757 23.8389 22.0356 23.9116 21.7898 23.9123C21.4448 23.9123 21.1239 23.7743 20.8847 23.527L15.1724 17.5847C13.5603 18.7224 11.6345 19.3309 9.66135 19.3259C4.3573 19.3259 0.0422974 15.0109 0.0422974 9.70682C0.0422974 4.40277 4.3573 0.0877686 9.66135 0.0877686C14.9654 0.0877686 19.2804 4.40277 19.2804 9.70682C19.2813 11.9697 18.4821 14.1601 17.024 15.8907V15.8895ZM16.771 9.70682C16.7689 7.82188 16.0191 6.01476 14.6863 4.6819C13.3534 3.34905 11.5463 2.59932 9.66135 2.59719C7.77641 2.59932 5.96929 3.34905 4.63643 4.6819C3.30358 6.01476 2.55385 7.82188 2.55172 9.70682C2.55385 11.5918 3.30358 13.3989 4.63643 14.7317C5.96929 16.0646 7.77641 16.8143 9.66135 16.8165C11.5463 16.8143 13.3534 16.0646 14.6863 14.7317C16.0191 13.3989 16.7689 11.5918 16.771 9.70682Z"
+                                    fill="#C4C4C4" />
+                            </svg>
+                        </button>
+                        <a class="help__btn" href="#">Допомогти</a>
+                        <button class="select-language">
+                            UA
+                            <ul class="select-language__list">
+                                <li class="select-language__list-item">UA</li>
+                                <li class="select-language__list-item">EN</li>
+                            </ul>
+                        </button>
+                        <button class="burger-button">
+                            <span class="burger-icon"></span>
+                        </button>
+                        <a class="user-login" href="#"><svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.0428 15.6557C17.4844 15.6557 19.464 13.7179 19.464 11.3279C19.464 8.93784 17.4844 7 15.0428 7C12.6012 7 10.6216 8.93784 10.6216 11.3279C10.6242 13.7169 12.6023 15.6531 15.0422 15.6557H15.0428ZM15.0428 8.31148C16.7448 8.31148 18.1242 9.66177 18.1242 11.3279C18.1242 12.994 16.7448 14.3443 15.0428 14.3443C13.3407 14.3443 11.9613 12.994 11.9613 11.3279C11.9635 9.66282 13.3418 8.31357 15.0428 8.31148ZM23.0267 22.2047C22.1939 18.5829 18.9361 15.918 15.0422 15.918C11.1483 15.918 7.89057 18.583 7.06796 22.1512L7.05778 22.2047C7.04813 22.2467 7.04224 22.2949 7.04224 22.3443C7.04224 22.7062 7.34234 23 7.71212 23C8.03152 23 8.29893 22.7807 8.36592 22.488L8.367 22.4838C9.06421 19.4569 11.7877 17.2295 15.0428 17.2295C18.2979 17.2295 21.0208 19.4564 21.7094 22.4387L21.718 22.4833C21.7855 22.7802 22.0519 22.9995 22.3713 22.9995C22.4222 22.9995 22.4715 22.9937 22.5192 22.9832L22.5149 22.9843C22.8188 22.9187 23.0422 22.6574 23.0422 22.3448C23.0422 22.2949 23.0363 22.2467 23.0256 22.2L23.0267 22.2047Z"
+                                    fill="#CBCBCB" stroke="#C4C4C4" />
+                                <rect x="1.04224" y="1" width="28" height="28" rx="14" stroke="#C4C4C4"
+                                    stroke-width="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="form__wrapper">
+                        <form class="form">
+                            <input class="form__search-input" type="text" />
+                            <input class="form__search-btn" type="submit" value="" />
+                        </form>
+                        <button class="close-search">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.172419 11.8276C-0.0574729 11.5977 -0.0574729 11.225 0.172419 10.9951L10.9951 0.172419C11.225 -0.0574727 11.5977 -0.0574725 11.8276 0.172419C12.0575 0.402311 12.0575 0.775039 11.8276 1.00493L1.00493 11.8276C0.775038 12.0575 0.402311 12.0575 0.172419 11.8276Z"
+                                    fill="white" />
+                                <path
+                                    d="M0.17242 0.172419C0.402311 -0.0574729 0.77504 -0.0574729 1.00493 0.172419L11.8276 10.9951C12.0575 11.225 12.0575 11.5977 11.8276 11.8276C11.5977 12.0575 11.225 12.0575 10.9951 11.8276L0.172419 1.00493C-0.0574722 0.775038 -0.057472 0.402311 0.17242 0.172419Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="header__mobile" class="header__mobile">
+                <div class="container">
+                    <div class="header__mobile-inner">
+                        <form class="header__mobile-form">
+                            <input class="header__mobile-input" type="text" />
+                            <input class="header__mobile-search-btn" type="submit" value="" />
+                        </form>
+                        <nav class="menu menu-mobile">
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link has-sub" href="#">Про нас</a>
+                                    <ul class="sub-menu__list sub-menu__list-mobile">
+                                        <li class="sub-menu__list-item">
+                                            <a class="sub-menu__list-link" href="#">Команда</a>
+                                        </li>
+                                        <li class="sub-menu__list-item">
+                                            <a class="sub-menu__list-link" href="#">ЗМІ про нас</a>
+                                        </li>
+                                        <li class="sub-menu__list-item">
+                                            <a class="sub-menu__list-link" href="#">Відео</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Новини</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Кому допомагаємо</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Програми</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Звіти</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Кампанії</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Вхід</a>
+                                </li>
+                                <a class="help__btn help__btn-mobile" href="#">Допомогти</a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="program">
+                <div class="container">
+                    <div class="program__wrapper">
+                        <div class="program__content">
+                            <div class="program__content-top">
+                                <h3 class="program__title">Програма психологічної підтримки</h3>
+                                <a class="program__presentation-btn" href="#">Презентація</a>
+                            </div>
+                            <div class="program__content-midle">
+                                <img src="../img/program-img.png" alt="program img">
+                                <div class="program__info">
+                                    <div class="program__info-collect">
+                                        <p>
+                                            <b>₴198 000<span>/280 000</span></b>
+                                            <b class="progress__interest">56%</b>
+                                        </p>
+                                        <div class="progress-container">
+                                            <div class="progress"></div>
+                                        </div>
+                                        <div class="program__remains-collect">
+                                            <p>Залишилось зібрати:</p>
+                                            <b>₴198 000</b>
+                                        </div>
+                                    </div>
+                                    <a class="program__help-btn" href="#">Допомогти</a>
+                                </div>
+                                <div class="program__text">
+                                    <p>Мета проекту - сприяння в оновленні та оснащенні медичних закладів України, які
+                                        першочергово були пошкоджені або в окупації, необхідним обладнанням, для
+                                        якісного та ефективного лікування дітей та дорослих.</p>
+                                    <p>Професійних лікарів в Україні багато. Але одних знань недостатньо, якщо в
+                                        арсеналі лікарні не буде потрібного обладнання. Тому кожен внесок є дуже
+                                        важливим, адже від якісного лікування залежать тисячі життів.
+                                        Нашої з вами допомоги наразі потребують:</p>
+                                    <p>
+                                        <b>Вишгородська центральна районна лікарня</b>, а саме необхідні аудіометр,
+                                        енцефалограф, коагулограф, цитоскоп, рентгенологічний апарат С-арка,
+                                        наркозно-дихальний апарат, паровий стерилізатор. Загальна сума обладнання
+                                        складає 10 960 000 грн.
+
+                                    </p>
+                                    <p>
+                                        <b>Димерській центральній селищній лікарні</b>
+                                        необхідні - апарат високочастотний
+                                        електрохірургічний, аудіометр, вакуумний насос для терапії ран, апарат для
+                                        магнітотерапії, апарат ультразвукової терапії, електровідсмоктувач,
+                                        гінекологічний кольпоскоп з відеофіксацією, апарат транскраніальної
+                                        електротерапії. Загальна вартість обладнання складає 1 820 000 грн.
+                                    </p>
+                                    <p>
+                                        <b>Іванківська центральна районна лікарня</b>
+                                        Іванківська центральна районна лікарня має потребу в аудіометрі, апараті штучної
+                                        вентиляції легенів, електрокоагуляторі, пневматонометрі, пересувних операційнних
+                                        лампах. Загальна вартість обладнання складає 2 750 000 грн.
+                                    </p>
+                                    <p>
+                                        <b>Макарівській лікарні інтенсивного лікування</b>
+                                        необхідні - хірургічний стіл,
+                                        електрокоагулятор, відеоендоскопічна система в комплекті та пересувні операційні
+                                        лампи, загальною вартістю 3 900 000 грн.
+                                    </p>
+                                    <p>
+                                        <b>Макарівська багатопрофільна лікарня інтенсивного лікування</b>
+                                        теж потребує допомоги у вигляді автоматичного аналізатора гематологічного, лампа
+                                        для фототерапії, медичних нош, портативних небулайзерів, транскутанного
+                                        білірубінометра, цифрового стетоскопа. Загальна вартість обладнання складає 1
+                                        290 000 грн.
+                                    </p>
+                                    <p>
+                                        <b>Сумська обласна клінічна лікарня</b>
+                                        має потребу в дентальному 3D томографі, відеогастроскопі, МРТ, ангіографі,
+                                        аналізаторі гематологічному автоматичному, низькотемпературному
+                                        пероксидно-вакуумно-плазмовому стерилізаторі. Загальна сума 96 860 000 грн.
+                                    </p>
+                                    <p>
+                                        <b>Сумський обласний клінічний шпиталь</b>
+                                        ветеранів війни потербує апарат високоінтенсивної магнітотерапіі та апарат
+                                        магнітної стимуляції, загальною вартістю 4 900 000 грн.
+                                    </p>
+                                    <p>
+                                        * Бюджет кожної лікарні не передбачає закупівлю такого обладнання за рахунок
+                                        бюджетних коштів.
+                                        Закладений бюджет обладнання в середньому ціновому діапазоні та з урахуванням
+                                        доставки та монтажу.
+                                        Допомога надається на підставі медичних аудитів та з погодження Міністерства
+                                        охорони здоров’я України.
+                                        Все обладнання закуповується після проведення тендерів в найкоротші строки та з
+                                        отриманням знижки для благодійного проекту.
+                                        <span>Разом ми сила, об’єднуймось заради майбутнього України!</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="program__content-bottom">
+                                <h5 class="content__bottom-title">Відео</h5>
+                                <div class="video-items">
+                                    <div class="video-item">
+                                        <div class="video">
+
+                                        </div>
+                                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/beKLkWmX_zY"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe> -->
+                                        <p class="video__title">Дякуємо благодійникам PepsiCO Foundation!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="aside">
+                            <h3 class="aside__title">Новини:</h3>
+                            <ul class="news__list">
+                                <li class="news__list-item">
+                                    <a class="card-link" href="#">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="../img/news-img-1.png" alt="" />
+                                                <div class="gradient-img"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>20/03/2023</p>
+                                                <h4>
+                                                    Для діток було<br />
+                                                    закуплені 40 теплих спортивних костюмів!
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="news__list-item">
+                                    <a class="card-link" href="#">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="../img/news-img-2.png" alt="" />
+                                                <div class="gradient-img"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>17/03/2023</p>
+                                                <h4>Дякуємо компанії ТОВ "АТ КАРГIЛЛ"</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="news__list-item">
+                                    <a class="card-link" href="#">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="../img/news-img-3.png" alt="" />
+                                                <div class="gradient-img"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>16/03/2023</p>
+                                                <h4>Дякуємо Любові Мочаловій за благодійність!</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="news__list-item">
+                                    <a class="card-link" href="#">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="../img/news-img-4.png" alt="" />
+                                                <div class="gradient-img"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <p>14/03/2023</p>
+                                                <h4>Пост вдячності благодійникам Монделіс Україна 💛</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__col-main">
+                        <a class="footer__logo" href="#">
+                            <img class="footer__logo-img" src="../img/logo.png" alt="" />
+                        </a>
+                        <p class="footer__text">
+                            Виняткові права на фото-і інші матеріали належать авторам.
+                            Будь-яке розміщення матеріалів на сторонніх ресурсах необхідно
+                            узгоджувати з правовласниками.
+                        </p>
+                        <ul class="social__list">
+                            <li class="social__list-item">
+                                <a class="social__list-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0,0,256,256" width="52px" height="52px" fill-rule="nonzero">
+                                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal">
+                                            <g transform="scale(9.84615,9.84615)">
+                                                <path
+                                                    d="M7.54688,0c-4.15625,0 -7.54687,3.39063 -7.54687,7.54688v10.90625c0,4.15625 3.39063,7.54688 7.54688,7.54688h10.90625c4.15625,0 7.54688,-3.39062 7.54688,-7.54687v-10.90625c0,-4.15625 -3.39062,-7.54687 -7.54687,-7.54687zM7.54688,2h10.90625c3.07422,0 5.54688,2.46875 5.54688,5.54688v10.90625c0,3.07422 -2.46875,5.54688 -5.54687,5.54688h-10.90625c-3.07422,0 -5.54687,-2.46875 -5.54687,-5.54687v-10.90625c0,-3.07422 2.46875,-5.54687 5.54688,-5.54687zM20.5,4c-0.82812,0 -1.5,0.67188 -1.5,1.5c0,0.82813 0.67188,1.5 1.5,1.5c0.82813,0 1.5,-0.67187 1.5,-1.5c0,-0.82812 -0.67187,-1.5 -1.5,-1.5zM13,6c-3.85547,0 -7,3.14453 -7,7c0,3.85547 3.14453,7 7,7c3.85547,0 7,-3.14453 7,-7c0,-3.85547 -3.14453,-7 -7,-7zM13,8c2.77344,0 5,2.22656 5,5c0,2.77344 -2.22656,5 -5,5c-2.77344,0 -5,-2.22656 -5,-5c0,-2.77344 2.22656,-5 5,-5z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero">
+                                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal">
+                                            <g transform="scale(5.12,5.12)">
+                                                <path
+                                                    d="M32,11h5c0.552,0 1,-0.448 1,-1v-6.737c0,-0.524 -0.403,-0.96 -0.925,-0.997c-1.591,-0.113 -4.699,-0.266 -6.934,-0.266c-6.141,0 -10.141,3.68 -10.141,10.368v6.632h-7c-0.552,0 -1,0.448 -1,1v7c0,0.552 0.448,1 1,1h7v19c0,0.552 0.448,1 1,1h7c0.552,0 1,-0.448 1,-1v-19h7.222c0.51,0 0.938,-0.383 0.994,-0.89l0.778,-7c0.066,-0.592 -0.398,-1.11 -0.994,-1.11h-8v-5c0,-1.657 1.343,-3 3,-3z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero">
+                                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal">
+                                            <g transform="scale(5.12,5.12)">
+                                                <path
+                                                    d="M44.89844,14.5c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.29687,-0.69922 -9.39844,-1.19922 -16,-1.19922c-6.59766,0 -12.79687,0.5 -16.09766,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.40234,2.5 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.5,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.60156,-0.5 16.10156,-1.19922c2.19922,-0.5 4.09766,-2 4.5,-4.30078c0.39844,-2.5 0.89844,-6.10156 1,-10.5c-0.20312,-4.5 -0.70312,-8 -1.20312,-10.5zM19,32v-14l12.19922,7z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-link" href="#">
+                                    <svg fill="#ffffff" height="800px" width="800px" version="1.1" id="Layer_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="-143 145 512 512" xml:space="preserve" stroke="#ffffff">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                        <g id="SVGRepo_iconCarrier">
+                                            <g>
+                                                <path
+                                                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7 c-20.8,20.8-44.9,37.1-71.8,48.4c-27.8,11.8-57.4,17.7-88,17.7c-30.5,0-60.1-6-88-17.7c-26.9-11.4-51.1-27.7-71.8-48.4 c-20.8-20.8-37.1-44.9-48.4-71.8C-107,461.1-113,431.5-113,401s6-60.1,17.7-88c11.4-26.9,27.7-51.1,48.4-71.8 c20.9-20.8,45-37.1,71.9-48.5C52.9,181,82.5,175,113,175s60.1,6,88,17.7c26.9,11.4,51.1,27.7,71.8,48.4 c20.8,20.8,37.1,44.9,48.4,71.8c11.8,27.8,17.7,57.4,17.7,88c0,30.5-6,60.1-17.7,88C309.8,515.8,293.5,540,272.8,560.7z" />
+                                                <path
+                                                    d="M234.3,313.1c-10.2,6-21.4,10.4-33.4,12.8c-9.6-10.2-23.3-16.6-38.4-16.6c-29,0-52.6,23.6-52.6,52.6c0,4.1,0.4,8.1,1.4,12 c-43.7-2.2-82.5-23.1-108.4-55c-4.5,7.8-7.1,16.8-7.1,26.5c0,18.2,9.3,34.3,23.4,43.8c-8.6-0.3-16.7-2.7-23.8-6.6v0.6 c0,25.5,18.1,46.8,42.2,51.6c-4.4,1.2-9.1,1.9-13.9,1.9c-3.4,0-6.7-0.3-9.9-0.9c6.7,20.9,26.1,36.1,49.1,36.5 c-18,14.1-40.7,22.5-65.3,22.5c-4.2,0-8.4-0.2-12.6-0.7c23.3,14.9,50.9,23.6,80.6,23.6c96.8,0,149.7-80.2,149.7-149.7 c0-2.3,0-4.6-0.1-6.8c10.3-7.5,19.2-16.7,26.2-27.3c-9.4,4.2-19.6,7-30.2,8.3C222.1,335.7,230.4,325.4,234.3,313.1z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" width="256" height="256" viewBox="0 0 256 256"
+                                        xml:space="preserve">
+                                        <defs></defs>
+                                        <g style="
+                            stroke: none;
+                            stroke-width: 0;
+                            stroke-dasharray: none;
+                            stroke-linecap: butt;
+                            stroke-linejoin: miter;
+                            stroke-miterlimit: 10;
+                            fill: none;
+                            fill-rule: nonzero;
+                            opacity: 1;
+                          " transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                            <path
+                                                d="M 78.966 90 H 11.034 C 4.95 90 0 85.05 0 78.966 V 11.034 C 0 4.95 4.95 0 11.034 0 h 67.932 C 85.05 0 90 4.95 90 11.034 v 67.932 C 90 85.05 85.05 90 78.966 90 z M 11.034 6 C 8.258 6 6 8.258 6 11.034 v 67.932 C 6 81.741 8.258 84 11.034 84 h 67.932 C 81.741 84 84 81.741 84 78.966 V 11.034 C 84 8.258 81.741 6 78.966 6 H 11.034 z"
+                                                style="
+                              stroke: none;
+                              stroke-width: 1;
+                              stroke-dasharray: none;
+                              stroke-linecap: butt;
+                              stroke-linejoin: miter;
+                              stroke-miterlimit: 10;
+                              fill: rgb(255, 255, 255);
+                              fill-rule: nonzero;
+                              opacity: 1;
+                            " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <rect x="20.82" y="36.62" rx="0" ry="0" width="10.37" height="33.34" style="
+                              stroke: none;
+                              stroke-width: 1;
+                              stroke-dasharray: none;
+                              stroke-linecap: butt;
+                              stroke-linejoin: miter;
+                              stroke-miterlimit: 10;
+                              fill: rgb(255, 255, 255);
+                              fill-rule: nonzero;
+                              opacity: 1;
+                            " transform=" matrix(1 0 0 1 0 0) " />
+                                            <path
+                                                d="M 26.005 32.062 c -3.32 0 -6.005 -2.692 -6.005 -6.007 c 0 -3.318 2.685 -6.011 6.005 -6.011 c 3.313 0 6.005 2.692 6.005 6.011 C 32.01 29.37 29.317 32.062 26.005 32.062 z"
+                                                style="
+                              stroke: none;
+                              stroke-width: 1;
+                              stroke-dasharray: none;
+                              stroke-linecap: butt;
+                              stroke-linejoin: miter;
+                              stroke-miterlimit: 10;
+                              fill: rgb(255, 255, 255);
+                              fill-rule: nonzero;
+                              opacity: 1;
+                            " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <path
+                                                d="M 70 69.956 H 59.643 V 53.743 c 0 -3.867 -0.067 -8.84 -5.385 -8.84 c -5.392 0 -6.215 4.215 -6.215 8.562 v 16.491 H 37.686 V 36.617 h 9.939 v 4.559 h 0.141 c 1.383 -2.622 4.764 -5.385 9.804 -5.385 c 10.493 0 12.43 6.903 12.43 15.88 V 69.956 z"
+                                                style="
+                              stroke: none;
+                              stroke-width: 1;
+                              stroke-dasharray: none;
+                              stroke-linecap: butt;
+                              stroke-linejoin: miter;
+                              stroke-miterlimit: 10;
+                              fill: rgb(255, 255, 255);
+                              fill-rule: nonzero;
+                              opacity: 1;
+                            " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__list-item">
+                                <a class="social__list-link" href="#">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M23.1038 8.34999C23.1038 8.34999 24.8846 7.65562 24.7362 9.34196C24.6867 10.0363 24.2416 12.4667 23.8953 15.0954L22.7081 22.8823C22.7081 22.8823 22.6092 24.0231 21.7188 24.2215C20.8284 24.4198 19.4929 23.5271 19.2455 23.3287C19.0476 23.1799 15.5356 20.948 14.2989 19.8568C13.9527 19.5592 13.5569 18.964 14.3484 18.2697L19.5423 13.3099C20.1359 12.7147 20.7295 11.3259 18.2562 13.0123L11.331 17.7241C11.331 17.7241 10.5395 18.2201 9.0556 17.7737L5.84031 16.7817C5.84031 16.7817 4.65313 16.0378 6.68123 15.2937C11.6278 12.9626 17.7121 10.5819 23.1038 8.34999Z"
+                                            fill="white" />
+                                        <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col-nav">
+                        <ul class="footer__nav">
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#">Про нас</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#">Новини</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#">Кому допомагаємо</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#">Програми</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#">Відео</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#">Звіти</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col-contacts">
+                        <h6 class="footer__title">Наші контакти:</h6>
+                        <p class="footer__text">
+                            Україна, м.Київ, бул. Лесі Українки, 30б/42
+                        </p>
+                        <h6 class="footer__title">Загальні питання:</h6>
+                        <a href="tel:+38-044-334-64-27">+38-044-334-64-27</a>
+                        <a href="tel:+38-067-215-99-55">+38-067-215-99-55</a>
+                        <h6 class="footer__title">Відділ фандрейзингу:</h6>
+                        <a href="tel:+38-067-216-99-55">+38-067-216-99-55</a>
+                        <a href="tel:+38-096-366-97-90">+38-096-366-97-90</a>
+                        <a href="mailto:info@charitymay.com">info@charitymay.com</a>
+                    </div>
+                    <div class="footer__col-charity">
+                        <p>Пожертвувати кошти на благодійність</p>
+                        <a class="footer__btn" href="#">Хочу допомогти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <p>© 2023 Благодійний фонд - “Благомай”</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

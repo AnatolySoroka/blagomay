@@ -11,11 +11,6 @@ const refs = {
 };
 
 
-// $(function () {
-//   var iframe = $('.frame', parent.document.body);
-//   iframe.height($(document.body).height());
-// });
-
 
 // mobile menu
 
@@ -166,6 +161,32 @@ $(document).ready(function () {
     ]
   });
 });
+
+//////
+
+// $(document).ready(function () {
+//   $(".video-items").slick({
+//     centerPadding: "0px",
+//     slidesToShow: 3,
+//     arrows: false,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 2,
+//           // slidesToShow: 1.2,
+//         }
+//       },
+//       {
+//         breakpoint: 375,
+//         settings: {
+//           // slidesToShow: 2,
+//           slidesToShow: 1.2,
+//         }
+//       }
+//     ]
+//   });
+// });
 
 // news resize
 const list = document.querySelector(".news__list");
