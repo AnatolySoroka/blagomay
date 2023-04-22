@@ -1448,6 +1448,226 @@ ul.sub-menu__list.show {
   font-size: 16px;
   line-height: 22px;
 }
+
+/* PROGRAMS SECTION */
+
+.programs {
+  background-color: var(--whiteBackground);
+}
+
+.programs__top {
+  padding: 40px 0;
+  border-bottom: 2px solid var(--lightGray);
+}
+
+.programs__top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.programs__top-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.reset-filter {
+  color: var(--forestGreen);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.programs__filter-items {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__item {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.filter__item path,
+.filter__item:hover button,
+.filter__item:hover p {
+  transition: all 0.3s ease;
+}
+
+.filter__item:hover path {
+  fill: var(--white);
+}
+
+.filter__item:hover button {
+  background-color: var(--forestGreen);
+}
+
+.filter__item:hover p {
+  color: var(--forestGreen);
+}
+
+.filter__item p {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.filter__item button {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+  display: grid;
+  place-items: center;
+}
+
+.programs__content {
+  padding: 65px 0 60px;
+}
+
+.programs__content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.programs__content-nav button {
+  padding: 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--lightGray);
+  transition: all 0.3s ease;
+  color: var(--darkGray);
+}
+
+.programs__content-nav button:hover {
+  border-color: var(--forestGreen);
+  color: var(--black);
+}
+
+.programs__content-nav button:focus {
+  border-color: var(--forestGreen);
+  color: var(--black);
+}
+
+.programs__content-title {
+  display: flex;
+  gap: 20px;
+}
+
+.programs__content-title h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.programs__content-title a {
+  padding: 11.5px 14.5px;
+}
+
+.programs__lsit {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.program__list-item {
+  max-width: 380px;
+  border-radius: 12px;
+  background-color: var(--white);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.img-wrapper {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.program__list-item:hover img {
+  transform: scale(1.1);
+}
+
+.program__list-item:hover {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.program__list-item:hover .program__help-btn {
+  background-color: #FFE609;
+}
+
+.program__list-item img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.program__item-content {
+  padding: 20px;
+}
+
+.program__item-title h6 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 6px;
+}
+
+.program__item-title p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #898989;
+}
+
+.program__item-content .program__info .program__info-collect {
+  margin: 20px 0;
+}
+
+.program__item-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.program__help-btn {
+  padding: 12px 35px;
+  width: 160px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.program__details-btn {
+  display: inline-block;
+  background-color: #f0f4f6;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--black);
+  padding: 11px 34px;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease;
+  width: 160px;
+}
+
 /* FOOTER SECTION */
 
 .footer {
@@ -1671,7 +1891,7 @@ ul.social__list {
   .program__info {
     display: block;
   }
-  .program__help-btn {
+  .program__info .program__help-btn {
     margin-top: 20px;
   }
   .program__info-collect {
