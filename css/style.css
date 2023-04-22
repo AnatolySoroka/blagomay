@@ -1379,18 +1379,60 @@ ul.sub-menu__list.show {
   line-height: 30px;
 }
 
-.video-items {
+/* .video-item {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+} */
+
+.video-item {
+  position: relative;
+  max-width: 278px;
+  height: 156px;
+  /* height: 100%; */
+  /* padding-top: 56.25%; */
 }
 
-.video {
+.video-item iframe {
+  max-width: 278px;
+  height: 156px;
+  border-radius: 12px;
+}
+.to-play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://img.youtube.com/vi/beKLkWmX_zY/sddefault.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.to-play.removed {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+/* .player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 12px;
   min-width: 278px;
+  width: 100%;
   padding-top: 56.25%;
   background-color: red;
-}
+} */
 
 /* .video-items iframe {
   margin-top: 20px;
@@ -1604,7 +1646,7 @@ ul.social__list {
   }
   .aside {
     width: 100%;
-    padding: 30px 0 0;
+    padding: 40px 0 0;
   }
   .program__content-midle img {
     margin: 13px auto 30px;
@@ -1802,6 +1844,28 @@ ul.social__list {
   }
   .charity__logo img {
     width: 110px;
+  }
+  .program {
+    padding: 20px 0;
+  }
+  .program__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .program__presentation-btn {
+    padding: 14px 21px 14px 63px;
+  }
+  .program__help-btn {
+    display: block;
+  }
+  .program__text {
+    margin-top: 20px;
+  }
+  .program__content-bottom {
+    margin-top: 30px;
+  }
+  .aside .news__list {
+    margin-top: 20px;
   }
 
   /* .card-image img {
