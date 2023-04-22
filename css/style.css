@@ -1664,6 +1664,7 @@ ul.sub-menu__list.show {
   color: var(--black);
   padding: 11px 34px;
   border-radius: 6px;
+  transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   width: 160px;
 }
