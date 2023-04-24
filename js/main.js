@@ -13,7 +13,72 @@ const refs = {
   navMapBtn: document.querySelector('.content-nav__map'),
   programsMap: document.querySelector('.program__map'),
   programsList: document.querySelector('.programs__list'),
+  filterItem: document.querySelectorAll('.filter__item'),
+  resetBtn: document.querySelector('.reset-filter'),
 };
+
+
+// mobile menu
+
+refs.burgerBtn.addEventListener("click", showMobileMenu);
+
+function showMobileMenu() {
+  refs.burgerBtn.classList.toggle("active");
+  refs.mobileMenu.classList.toggle("show");
+  if (refs.mobileMenu.classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+}
+
+// select language
+refs.selectLanguage.addEventListener("click", function () {
+  refs.selectLanguageMenu.classList.toggle("show");
+  refs.selectLanguage.classList.toggle("active");
+});
+
+window.addEventListener("click", function (event) {
+  if (!event.target.matches(".select-language")) {
+    refs.selectLanguageMenu.classList.remove("show");
+    refs.selectLanguage.classList.remove("active");
+  }
+});
+
+// dropdown menu
+
+refs.dropdownToggle.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("active");
+    item.nextElementSibling.classList.toggle("show");
+
+    window.addEventListener("click", function (event) {
+      if (!event.target.matches(".has-sub")) {
+        item.classList.remove("active");
+        item.nextElementSibling.classList.remove("show");
+      }
+    });
+  });
+});
+
+// search input
+refs.searchBtn.addEventListener("click", function () {
+  refs.headerBottom.classList.toggle("show");
+});
+refs.closeSearch.addEventListener("click", function () {
+  refs.headerBottom.classList.remove("show");
+});
+
+document.addEventListener('click', function (event) {
+  let isClickInsideHeader = event.target.closest('.header');
+  let isClickInsideShow = event.target.closest('.show');
+  let isClickInsideButton = event.target.closest('.header__button');
+  if (!isClickInsideHeader && !isClickInsideShow && !isClickInsideButton) {
+    // клік відбувся поза межами .header, .show та .header__button
+    // Приховуємо елемент .show
+    document.querySelector('.show').classList.remove('show');
+  }
+});
 
 // hero slider
 $(document).ready(function () {
@@ -102,6 +167,8 @@ $(document).ready(function () {
   });
 });
 
+
+
 if (refs.navListBtn.classList.contains('active')) {
   refs.navMapBtn.classList.remove('active');
   refs.programsList.style.display = 'flex';
@@ -128,79 +195,24 @@ refs.navMapBtn.addEventListener('click', () => {
 var mixer = mixitup('#programs__list', {
   callbacks: {
     onMixStart: function () {
-      // const activeBtn = document.querySelector('.programs__filter-items .mixitup-control-active');
-      // console.log(activeBtn)
-      // const newTitle = activeBtn.innerText.toLowerCase();
-
-      // const titleIcon = document.querySelector('.mixitup-control-active button').innerHTML;
-      // refs.contentTitle.innerHTML = titleIcon + newTitle[0].toUpperCase() + newTitle.slice(1);
+      refs.filterItem.forEach(item => {
+        if (item.classList.contains('mixitup-control-active')) {
+          const activeBtn = item.querySelector('p').innerText;
+          const newTitle = activeBtn.toLowerCase();
+          const titleIcon = item.querySelector('.mixitup-control-active button').innerHTML;
+          refs.contentTitle.innerHTML = titleIcon + newTitle[0].toUpperCase() + newTitle.slice(1);
+        }
+      })
     }
   }
 });
 
+refs.resetBtn.addEventListener('click', () => {
+  refs.contentTitle.innerHTML = 'Всі активні програми';
+})
 
 
-// mobile menu
 
-refs.burgerBtn.addEventListener("click", showMobileMenu);
-
-function showMobileMenu() {
-  refs.burgerBtn.classList.toggle("active");
-  refs.mobileMenu.classList.toggle("show");
-  if (refs.mobileMenu.classList.contains("show")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-}
-
-// select language
-refs.selectLanguage.addEventListener("click", function () {
-  refs.selectLanguageMenu.classList.toggle("show");
-  refs.selectLanguage.classList.toggle("active");
-});
-
-window.addEventListener("click", function (event) {
-  if (!event.target.matches(".select-language")) {
-    refs.selectLanguageMenu.classList.remove("show");
-    refs.selectLanguage.classList.remove("active");
-  }
-});
-
-// dropdown menu
-
-refs.dropdownToggle.forEach((item) => {
-  item.addEventListener("click", function () {
-    item.classList.toggle("active");
-    item.nextElementSibling.classList.toggle("show");
-
-    window.addEventListener("click", function (event) {
-      if (!event.target.matches(".has-sub")) {
-        item.classList.remove("active");
-        item.nextElementSibling.classList.remove("show");
-      }
-    });
-  });
-});
-
-// search input
-refs.searchBtn.addEventListener("click", function () {
-  refs.headerBottom.classList.toggle("show");
-});
-refs.closeSearch.addEventListener("click", function () {
-  refs.headerBottom.classList.remove("show");
-});
-
-document.addEventListener('click', function (event) {
-  let isClickInsideHeader = event.target.closest('.header');
-  let isClickInsideShow = event.target.closest('.show');
-  let isClickInsideButton = event.target.closest('.header__button');
-  if (!isClickInsideHeader && !isClickInsideShow && !isClickInsideButton) {
-    // клік відбувся поза межами .header, .show та .header__button
-    // Приховуємо елемент .show
-    document.querySelector('.show').classList.remove('show');
-  }
-});
 
 
 
@@ -208,41 +220,41 @@ document.addEventListener('click', function (event) {
 //////
 
 // 2. This code loads the IFrame Player API code asynchronously.
-let tag = document.createElement('script');
+// let tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// tag.src = "https://www.youtube.com/iframe_api";
+// let firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-let player;
+// // 3. This function creates an <iframe> (and YouTube player)
+// //    after the API code downloads.
+// let player;
 
-$('.to-play').click(function () {
+// $('.to-play').click(function () {
 
-  let btn = $(this),
-    videoID = btn.data('video'),
-    playerID = btn.data('id');
+//   let btn = $(this),
+//     videoID = btn.data('video'),
+//     playerID = btn.data('id');
 
 
-  player = new YT.Player(playerID, {
-    playerVars: {
-      'autoplay': 0,
-      'conttrols': 1,
-      'playsinline': 1,
-    },
-    videoId: videoID,
-    events: {
-      'onReady': onPlayerReady,
-    }
-  });
-});
+//   player = new YT.Player(playerID, {
+//     playerVars: {
+//       'autoplay': 0,
+//       'conttrols': 1,
+//       'playsinline': 1,
+//     },
+//     videoId: videoID,
+//     events: {
+//       'onReady': onPlayerReady,
+//     }
+//   });
+// });
 
-function onPlayerReady(event) {
-  let video = event.target.h;
-  $(video).siblings('.to-play').addClass('removed');
-  event.target.playVideo();
-}
+// function onPlayerReady(event) {
+//   let video = event.target.h;
+//   $(video).siblings('.to-play').addClass('removed');
+//   event.target.playVideo();
+// }
 
 
 
