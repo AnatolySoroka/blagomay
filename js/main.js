@@ -8,7 +8,47 @@ const refs = {
   selectLanguageMenu: document.querySelector(".select-language__list"),
   burgerBtn: document.querySelector(".burger-button"),
   mobileMenu: document.querySelector(".header__mobile"),
+  contentTitle: document.querySelector('.programs__content-title h2'),
+  navListBtn: document.querySelector('.content-nav__list'),
+  navMapBtn: document.querySelector('.content-nav__map'),
+  programsMap: document.querySelector('.program__map'),
+  programsList: document.querySelector('.programs__list'),
 };
+
+if (refs.navListBtn.classList.contains('active')) {
+  refs.navMapBtn.classList.remove('active');
+  refs.programsList.style.display = 'flex';
+  refs.programsMap.style.display = 'none';
+}
+
+
+refs.navListBtn.addEventListener('click', () => {
+  refs.navListBtn.classList.add('active');
+  refs.navMapBtn.classList.remove('active');
+  refs.programsList.style.display = 'flex';
+  refs.programsMap.style.display = 'none';
+});
+
+refs.navMapBtn.addEventListener('click', () => {
+  refs.navMapBtn.classList.add('active');
+  refs.navListBtn.classList.remove('active');
+  refs.programsList.style.display = 'none';
+  refs.programsMap.style.display = 'block';
+})
+
+
+// filter miItUp lpugin
+var mixer = mixitup('#programs__list', {
+  callbacks: {
+    onMixStart: function () {
+      const activeBtn = document.querySelector('.mixitup-control-active p');
+      const newTitle = activeBtn.innerText.toLowerCase();
+
+      const titleIcon = document.querySelector('.mixitup-control-active button').innerHTML;
+      refs.contentTitle.innerHTML = titleIcon + newTitle[0].toUpperCase() + newTitle.slice(1);
+    }
+  }
+});
 
 
 
@@ -246,3 +286,4 @@ function resize() {
 
 resize();
 window.addEventListener("resize", resize);
+
