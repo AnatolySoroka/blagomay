@@ -1552,6 +1552,7 @@ div.mixitup-control-active > p {
 .programs__content-header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -1626,7 +1627,7 @@ div.mixitup-control-active > p {
 
 .programs__list {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -1720,6 +1721,10 @@ div.mixitup-control-active > p {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   width: 160px;
+}
+
+.program__details-btn:hover {
+  background-color: #dfeaef;
 }
 
 /* FOOTER SECTION */
@@ -1954,6 +1959,9 @@ ul.social__list {
   .program__content-midle img {
     margin: 19px auto 20px;
   }
+  .programs__content-nav {
+    margin-top: 22px;
+  }
 }
 @media (max-width: 550px) {
   .offer__btn .help__btn,
@@ -2011,6 +2019,15 @@ ul.social__list {
   .programs__content-title h2 {
     font-size: 22px;
     line-height: 30px;
+  }
+  .programs__content-nav button {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  .programs__content-nav .program__help-btn {
+    padding: 17px 10px;
+    text-align: center;
+    width: 120px;
   }
 }
 
@@ -2178,6 +2195,20 @@ ul.social__list {
   }
   .aside .news__list {
     margin-top: 20px;
+  }
+  .program__item-buttons a {
+    width: 118px;
+    text-align: center;
+    padding: 12px 9px;
+  }
+  .program__item-content .program__info .program__info-collect {
+    margin: 16px 0;
+  }
+  .program__info-collect p {
+    font-size: 20px;
+  }
+  .program__remains-collect p {
+    font-size: 15px;
   }
 
   /* .card-image img {

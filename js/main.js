@@ -15,106 +15,6 @@ const refs = {
   programsList: document.querySelector('.programs__list'),
 };
 
-if (refs.navListBtn.classList.contains('active')) {
-  refs.navMapBtn.classList.remove('active');
-  refs.programsList.style.display = 'flex';
-  refs.programsMap.style.display = 'none';
-}
-
-
-refs.navListBtn.addEventListener('click', () => {
-  refs.navListBtn.classList.add('active');
-  refs.navMapBtn.classList.remove('active');
-  refs.programsList.style.display = 'flex';
-  refs.programsMap.style.display = 'none';
-});
-
-refs.navMapBtn.addEventListener('click', () => {
-  refs.navMapBtn.classList.add('active');
-  refs.navListBtn.classList.remove('active');
-  refs.programsList.style.display = 'none';
-  refs.programsMap.style.display = 'block';
-})
-
-
-// filter miItUp lpugin
-var mixer = mixitup('#programs__list', {
-  callbacks: {
-    onMixStart: function () {
-      const activeBtn = document.querySelector('.mixitup-control-active p');
-      const newTitle = activeBtn.innerText.toLowerCase();
-
-      const titleIcon = document.querySelector('.mixitup-control-active button').innerHTML;
-      refs.contentTitle.innerHTML = titleIcon + newTitle[0].toUpperCase() + newTitle.slice(1);
-    }
-  }
-});
-
-
-
-// mobile menu
-
-refs.burgerBtn.addEventListener("click", showMobileMenu);
-
-function showMobileMenu() {
-  refs.burgerBtn.classList.toggle("active");
-  refs.mobileMenu.classList.toggle("show");
-  if (refs.mobileMenu.classList.contains("show")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
-}
-
-// select language
-refs.selectLanguage.addEventListener("click", function () {
-  refs.selectLanguageMenu.classList.toggle("show");
-  refs.selectLanguage.classList.toggle("active");
-});
-
-window.addEventListener("click", function (event) {
-  if (!event.target.matches(".select-language")) {
-    refs.selectLanguageMenu.classList.remove("show");
-    refs.selectLanguage.classList.remove("active");
-  }
-});
-
-// dropdown menu
-
-refs.dropdownToggle.forEach((item) => {
-  item.addEventListener("click", function () {
-    item.classList.toggle("active");
-    item.nextElementSibling.classList.toggle("show");
-
-    window.addEventListener("click", function (event) {
-      if (!event.target.matches(".has-sub")) {
-        item.classList.remove("active");
-        item.nextElementSibling.classList.remove("show");
-      }
-    });
-  });
-});
-
-// search input
-refs.searchBtn.addEventListener("click", function () {
-  refs.headerBottom.classList.toggle("show");
-});
-refs.closeSearch.addEventListener("click", function () {
-  refs.headerBottom.classList.remove("show");
-});
-
-document.addEventListener('click', function (event) {
-  let isClickInsideHeader = event.target.closest('.header');
-  let isClickInsideShow = event.target.closest('.show');
-  let isClickInsideButton = event.target.closest('.header__button');
-  if (!isClickInsideHeader && !isClickInsideShow && !isClickInsideButton) {
-    // клік відбувся поза межами .header, .show та .header__button
-    // Приховуємо елемент .show
-    document.querySelector('.show').classList.remove('show');
-  }
-});
-
-
 // hero slider
 $(document).ready(function () {
   $("#hero-slider").slick({
@@ -201,6 +101,109 @@ $(document).ready(function () {
     ]
   });
 });
+
+if (refs.navListBtn.classList.contains('active')) {
+  refs.navMapBtn.classList.remove('active');
+  refs.programsList.style.display = 'flex';
+  refs.programsMap.style.display = 'none';
+}
+
+
+refs.navListBtn.addEventListener('click', () => {
+  refs.navListBtn.classList.add('active');
+  refs.navMapBtn.classList.remove('active');
+  refs.programsList.style.display = 'flex';
+  refs.programsMap.style.display = 'none';
+});
+
+refs.navMapBtn.addEventListener('click', () => {
+  refs.navMapBtn.classList.add('active');
+  refs.navListBtn.classList.remove('active');
+  refs.programsList.style.display = 'none';
+  refs.programsMap.style.display = 'block';
+})
+
+
+// filter miItUp lpugin
+var mixer = mixitup('#programs__list', {
+  callbacks: {
+    onMixStart: function () {
+      // const activeBtn = document.querySelector('.programs__filter-items .mixitup-control-active');
+      // console.log(activeBtn)
+      // const newTitle = activeBtn.innerText.toLowerCase();
+
+      // const titleIcon = document.querySelector('.mixitup-control-active button').innerHTML;
+      // refs.contentTitle.innerHTML = titleIcon + newTitle[0].toUpperCase() + newTitle.slice(1);
+    }
+  }
+});
+
+
+
+// mobile menu
+
+refs.burgerBtn.addEventListener("click", showMobileMenu);
+
+function showMobileMenu() {
+  refs.burgerBtn.classList.toggle("active");
+  refs.mobileMenu.classList.toggle("show");
+  if (refs.mobileMenu.classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+}
+
+// select language
+refs.selectLanguage.addEventListener("click", function () {
+  refs.selectLanguageMenu.classList.toggle("show");
+  refs.selectLanguage.classList.toggle("active");
+});
+
+window.addEventListener("click", function (event) {
+  if (!event.target.matches(".select-language")) {
+    refs.selectLanguageMenu.classList.remove("show");
+    refs.selectLanguage.classList.remove("active");
+  }
+});
+
+// dropdown menu
+
+refs.dropdownToggle.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("active");
+    item.nextElementSibling.classList.toggle("show");
+
+    window.addEventListener("click", function (event) {
+      if (!event.target.matches(".has-sub")) {
+        item.classList.remove("active");
+        item.nextElementSibling.classList.remove("show");
+      }
+    });
+  });
+});
+
+// search input
+refs.searchBtn.addEventListener("click", function () {
+  refs.headerBottom.classList.toggle("show");
+});
+refs.closeSearch.addEventListener("click", function () {
+  refs.headerBottom.classList.remove("show");
+});
+
+document.addEventListener('click', function (event) {
+  let isClickInsideHeader = event.target.closest('.header');
+  let isClickInsideShow = event.target.closest('.show');
+  let isClickInsideButton = event.target.closest('.header__button');
+  if (!isClickInsideHeader && !isClickInsideShow && !isClickInsideButton) {
+    // клік відбувся поза межами .header, .show та .header__button
+    // Приховуємо елемент .show
+    document.querySelector('.show').classList.remove('show');
+  }
+});
+
+
+
 
 //////
 
