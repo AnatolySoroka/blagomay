@@ -28,7 +28,6 @@ body {
 body {
   font-family: "Open Sans";
   color: var(--black);
-  overflow-x: hidden;
 }
 
 .wrapper {
