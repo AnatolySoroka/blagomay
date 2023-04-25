@@ -17,13 +17,58 @@ const refs = {
   resetBtn: document.querySelector('.reset-filter'),
 };
 
-// const textElement = document.querySelector('.card-content h4');
-// console.log(textElement)
-// const maxCharacters = 20;
 
-// if (textElement.textContent.length > maxCharacters) {
-//   textElement.textContent = textElement.textContent.slice(0, maxCharacters) + '...';
-// }
+
+
+// video
+
+const videoInit = (selector) => {
+  const videos = document.querySelectorAll(selector)
+
+  if (videos.length > 0) {
+    videos.forEach(video => {
+      videoGenerate(video)
+    })
+  }
+}
+
+const videoGenerate = (video) => {
+  const btn = video.querySelector('.video-block__button')
+  const videoID = btn.dataset.videoId
+  const container = video.querySelector('.video-block__inner')
+
+  btn.addEventListener('click', () => {
+    const iframe = iframeGenerate(videoID)
+
+    container.innerHTML = '';
+    container.appendChild(iframe)
+  })
+}
+
+const iframeGenerate = (videoID) => {
+  const iframe = document.createElement('iframe')
+
+  const src = `https://www.youtube.com/embed/${videoID}?rel=0&showinfo=0&autoplay=1`
+
+  iframe.setAttribute('src', src)
+  iframe.setAttribute('frameborder', '0')
+  iframe.setAttribute('allow', 'autoplay')
+  iframe.setAttribute('allowfullscreen', '')
+  iframe.classList.add('video-block__content')
+
+  return iframe
+}
+
+videoInit('.video-block')
+
+
+// $(document).ready(function () {
+//   $(".video-container").slick({
+//     arrows: false,
+//     dots: false,
+//     centerPadding: "0px",
+//   });
+// });
 
 // mobile menu
 
@@ -174,6 +219,21 @@ $(document).ready(function () {
 });
 
 
+// $(document).ready(function () {
+//   $(".video-items").slick({
+//     // centerMode: true,
+//     arrows: false,
+//     dots: false,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     centerPadding: "0px",
+//     // adaptiveHeight: true,
+//     // adaptiveWidth: true,
+//     // autoplay: true,
+//   });
+// });
+
+
 
 if (refs.navListBtn.classList.contains('active')) {
   refs.navMapBtn.classList.remove('active');
@@ -222,75 +282,6 @@ refs.resetBtn.addEventListener('click', () => {
 
 
 
-
-
-
-
-//////
-
-// 2. This code loads the IFrame Player API code asynchronously.
-// let tag = document.createElement('script');
-
-// tag.src = "https://www.youtube.com/iframe_api";
-// let firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// // 3. This function creates an <iframe> (and YouTube player)
-// //    after the API code downloads.
-// let player;
-
-// $('.to-play').click(function () {
-
-//   let btn = $(this),
-//     videoID = btn.data('video'),
-//     playerID = btn.data('id');
-
-
-//   player = new YT.Player(playerID, {
-//     playerVars: {
-//       'autoplay': 0,
-//       'conttrols': 1,
-//       'playsinline': 1,
-//     },
-//     videoId: videoID,
-//     events: {
-//       'onReady': onPlayerReady,
-//     }
-//   });
-// });
-
-// function onPlayerReady(event) {
-//   let video = event.target.h;
-//   $(video).siblings('.to-play').addClass('removed');
-//   event.target.playVideo();
-// }
-
-
-
-
-// $(document).ready(function () {
-//   $(".video-items").slick({
-//     centerPadding: "0px",
-//     slidesToShow: 3,
-//     arrows: false,
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           slidesToShow: 2,
-//           // slidesToShow: 1.2,
-//         }
-//       },
-//       {
-//         breakpoint: 375,
-//         settings: {
-//           // slidesToShow: 2,
-//           slidesToShow: 1.2,
-//         }
-//       }
-//     ]
-//   });
-// });
 
 // news resize
 const list = document.querySelector(".news__list");
