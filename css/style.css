@@ -951,9 +951,64 @@ ul.sub-menu__list.show {
   flex-wrap: wrap;
   gap: 20px;
 }
+/**/
+
+.news__list-item {
+  width: 100%;
+  height: 100%;
+  max-width: 285px;
+}
 
 .card {
-  /* width: 100%; */
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-link:hover .card-image img {
+  transform: scale(1.1);
+  z-index: -10;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-image img {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.gradient-img {
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 16.98%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.card-content {
+  position: absolute;
+  /* top: 150px; */
+  bottom: 0px;
+  color: #fff;
+  padding: 10px;
+}
+
+/* .card {
   width: 285px;
   height: 285px;
   border-radius: 12px;
@@ -999,11 +1054,18 @@ ul.sub-menu__list.show {
   );
 }
 
+.card-content {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding: 10px;
+}
+
 .card:hover .card-image {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-}
+} */
 
 .card:hover {
   filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
@@ -1011,7 +1073,8 @@ ul.sub-menu__list.show {
 
 .card-content {
   position: absolute;
-  top: 147px;
+  /* top: 147px; */
+  bottom: 0;
   left: 0;
   right: 0;
   padding: 16px;
@@ -1076,7 +1139,7 @@ ul.sub-menu__list.show {
 
 .charity__slider-item {
   width: 180px;
-  height: 100px;
+  height: 150px;
   display: -ms-grid !important;
   display: grid !important;
   place-items: center;
@@ -1385,20 +1448,20 @@ ul.sub-menu__list.show {
   gap: 20px;
 } */
 
-.video-item {
+/* .video-item {
   position: relative;
   max-width: 278px;
   height: 156px;
-  /* height: 100%; */
-  /* padding-top: 56.25%; */
-}
+  height: 100%;
+  padding-top: 56.25%;
+} */
 
-.video-item iframe {
+/* .video-item iframe {
   max-width: 278px;
   height: 156px;
   border-radius: 12px;
-}
-.to-play {
+} */
+/* .to-play {
   position: absolute;
   top: 0;
   right: 0;
@@ -1414,13 +1477,13 @@ ul.sub-menu__list.show {
   background-size: cover;
   border-radius: 12px;
   transition: all 0.3s ease;
-}
+} */
 
-.to-play.removed {
+/* .to-play.removed {
   opacity: 0;
   visibility: hidden;
   z-index: -1;
-}
+} */
 /* .player {
   position: absolute;
   top: 0;
@@ -1441,13 +1504,13 @@ ul.sub-menu__list.show {
   height: 156px;
 } */
 
-.video__title {
+/* .video__title {
   max-width: 278px;
   margin-top: 10px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-}
+} */
 
 /* PROGRAMS SECTION */
 
@@ -2159,6 +2222,9 @@ ul.social__list {
   .news {
     padding: 40px 0;
   }
+  .news__list-item {
+    max-width: 100%;
+  }
   .partners {
     padding: 40px 0;
   }
@@ -2180,6 +2246,9 @@ ul.social__list {
   }
   .partners__slider .slick-dots {
     bottom: -30px;
+  }
+  .charity__slider-item {
+    height: 120px;
   }
   .charity__logo img {
     width: 110px;
@@ -2228,7 +2297,6 @@ ul.social__list {
     width: 42px;
     height: 42px;
   }
-
   .programs__content-title h2 svg {
     width: 30px;
     height: 30px;

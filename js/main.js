@@ -17,6 +17,13 @@ const refs = {
   resetBtn: document.querySelector('.reset-filter'),
 };
 
+// const textElement = document.querySelector('.card-content h4');
+// console.log(textElement)
+// const maxCharacters = 20;
+
+// if (textElement.textContent.length > maxCharacters) {
+//   textElement.textContent = textElement.textContent.slice(0, maxCharacters) + '...';
+// }
 
 // mobile menu
 
@@ -103,7 +110,6 @@ $(document).ready(function () {
     slidesToShow: 5,
     slidesToScroll: 5,
     autoplay: true,
-    // slidesPerRow: 1,
     responsive: [
       {
         breakpoint: 1200,
@@ -210,6 +216,9 @@ var mixer = mixitup('#programs__list', {
 refs.resetBtn.addEventListener('click', () => {
   refs.contentTitle.innerHTML = 'Всі активні програми';
 })
+
+
+
 
 
 
