@@ -200,7 +200,7 @@ var mixer = mixitup('#programs__list', {
           const activeBtn = item.querySelector('p').innerText;
           const newTitle = activeBtn.toLowerCase();
           const titleIcon = item.querySelector('.mixitup-control-active button').innerHTML;
-          refs.contentTitle.innerHTML = titleIcon + newTitle[0].toUpperCase() + newTitle.slice(1);
+          refs.contentTitle.innerHTML = `<div class="wrapper-icon">${titleIcon}</div>` + newTitle[0].toUpperCase() + newTitle.slice(1);
         }
       })
     }

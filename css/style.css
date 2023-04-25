@@ -1481,10 +1481,11 @@ ul.sub-menu__list.show {
 .programs__filter-items {
   margin-top: 30px;
   display: grid;
-  /* grid-template-columns: repeat(auto-fill minmax(300px 1fr)); */
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
   gap: 16px;
 }
 
@@ -1609,12 +1610,18 @@ div.mixitup-control-active > p {
   line-height: 44px;
 }
 
-.programs__content-title h2 svg {
+.programs__content-title h2 .wrapper-icon {
+  display: grid;
+  place-items: center;
   width: 55px;
   height: 55px;
-  padding: 10px;
   border: 1px solid var(--forestGreen);
   border-radius: 50%;
+}
+
+.programs__content-title h2 svg {
+  width: 38px;
+  height: 38px;
 }
 
 .programs__content-title h2 svg path {
@@ -1914,6 +1921,12 @@ ul.social__list {
     right: 16px;
     left: auto;
   }
+  .programs__filter-items {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 970px) {
@@ -2009,6 +2022,7 @@ ul.social__list {
     font-size: 11px;
     line-height: 15px;
     word-wrap: break-word;
+    hyphens: auto;
   }
   .programs__content {
     padding: 46px 0 40px;
@@ -2016,10 +2030,6 @@ ul.social__list {
   /* .programs__content-title {
     display: block;
   } */
-  .programs__content-title h2 {
-    font-size: 22px;
-    line-height: 30px;
-  }
   .programs__content-nav button {
     font-size: 14px;
     padding: 0 5px;
@@ -2210,19 +2220,17 @@ ul.social__list {
   .program__remains-collect p {
     font-size: 15px;
   }
+  .programs__content-title h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .programs__content-title h2 .wrapper-icon {
+    width: 42px;
+    height: 42px;
+  }
 
-  /* .card-image img {
-    width: 100%;
+  .programs__content-title h2 svg {
+    width: 30px;
+    height: 30px;
   }
-  .news__list-item {
-    width: 100%;
-    height: 300px;
-  }
-  .news__list-item:not(:first-child) {
-    margin-top: 20px;
-  }
-  .card {
-    width: 100%;
-    height: 310px;
-  } */
 }
