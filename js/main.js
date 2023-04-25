@@ -20,7 +20,7 @@ const refs = {
 
 
 
-// video
+// video init
 
 const videoInit = (selector) => {
   const videos = document.querySelectorAll(selector)
@@ -60,15 +60,6 @@ const iframeGenerate = (videoID) => {
 }
 
 videoInit('.video-block')
-
-
-// $(document).ready(function () {
-//   $(".video-container").slick({
-//     arrows: false,
-//     dots: false,
-//     centerPadding: "0px",
-//   });
-// });
 
 // mobile menu
 
@@ -132,6 +123,7 @@ document.addEventListener('click', function (event) {
   }
 });
 
+// SLIDERS
 // hero slider
 $(document).ready(function () {
   $("#hero-slider").slick({
@@ -219,22 +211,7 @@ $(document).ready(function () {
 });
 
 
-// $(document).ready(function () {
-//   $(".video-items").slick({
-//     // centerMode: true,
-//     arrows: false,
-//     dots: false,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     centerPadding: "0px",
-//     // adaptiveHeight: true,
-//     // adaptiveWidth: true,
-//     // autoplay: true,
-//   });
-// });
-
-
-
+// FILTER/
 if (refs.navListBtn.classList.contains('active')) {
   refs.navMapBtn.classList.remove('active');
   refs.programsList.style.display = 'flex';
@@ -276,12 +253,6 @@ var mixer = mixitup('#programs__list', {
 refs.resetBtn.addEventListener('click', () => {
   refs.contentTitle.innerHTML = 'Всі активні програми';
 })
-
-
-
-
-
-
 
 // news resize
 const list = document.querySelector(".news__list");
