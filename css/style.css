@@ -15,7 +15,6 @@
 html,
 body {
   height: 100%;
-  /* overflow-x: hidden; */
 }
 
 body {
@@ -354,7 +353,7 @@ ul.sub-menu__list-mobile.show {
   display: block;
   opacity: 1;
   visibility: visible;
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
   gap: 16px;
 }
 
@@ -842,7 +841,7 @@ ul.sub-menu__list.show {
 
 .map iframe {
   width: 100%;
-  height: 1100px;
+  height: 1120px;
 }
 
 /* ACHIEVEMENT SECTION */
@@ -1722,6 +1721,7 @@ div.mixitup-control-active > p {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
+  min-height: 55px;
 }
 
 .programs__content-title h2 .wrapper-icon {
@@ -2049,9 +2049,9 @@ ul.social__list {
   #header__mobile > div > div > nav {
     width: 100%;
   }
-  #header__mobile > div > div > nav > ul > li > a {
+  /* #header__mobile > div > div > nav > ul > li > a {
     display: block;
-  }
+  } */
   #header__mobile > div > div > nav > ul > li > a::after {
     right: 16px;
     left: auto;

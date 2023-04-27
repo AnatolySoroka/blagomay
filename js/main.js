@@ -29,7 +29,6 @@ const menuItems = document.querySelectorAll('.menu__list-item');
 menuItems.forEach(item => {
   // получаем ссылку элемента меню
   const link = item.querySelector('a');
-
   // если ссылка соответствует текущему пути, то добавляем класс "link"
   if (link.getAttribute('href') === path) {
     link.classList.add('link');
@@ -37,6 +36,21 @@ menuItems.forEach(item => {
     link.classList.remove('link');
   }
 });
+
+////
+const subMenuItems = document.querySelectorAll('.menu-mobile .menu__list .menu__list-item');
+
+subMenuItems.forEach(item => {
+  // // получаем ссылку элемента меню
+  const link = item.querySelector('a');
+  // // если ссылка соответствует текущему пути, то добавляем класс "link"
+  if (link.getAttribute('href') === path) {
+    link.classList.add('link');
+  } else {
+    link.classList.remove('link');
+  }
+});
+
 
 
 // video init
@@ -263,13 +277,6 @@ var mixer = mixitup('#programs__list', {
           const newTitle = activeBtn.toLowerCase();
           const titleIcon = item.querySelector('.mixitup-control-active button').innerHTML;
           refs.contentTitle.innerHTML = `<div class="wrapper-icon">${titleIcon}</div>` + newTitle[0].toUpperCase() + newTitle.slice(1);
-          // item.addEventListener('click', () => {
-          //   if (item.classList.contains('mixitup-control-active')) {
-          //     item.classList.toggle('mixitup-control-active');
-          //     refs.contentTitle.innerHTML = 'Всі активні програми';
-          //     mixer.filter('all');
-          //   }
-          // })
         }
       })
     }
