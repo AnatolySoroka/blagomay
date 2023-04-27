@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 :root {
   --white: #ffffff;
   --whiteBackground: #f7f7f7;
@@ -22,7 +15,7 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -295,6 +288,12 @@ a.help__btn-mobile {
   transition: all 0.3s ease;
 }
 
+.menu__list-link.link {
+  font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--forestGreen);
+}
+
 .menu__list-link:hover {
   color: #5f5f5f;
 }
@@ -365,7 +364,9 @@ ul.sub-menu__list.show {
   display: flex;
   opacity: 1;
   visibility: visible;
-  z-index: 30;
+  z-index: 21;
+  -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
 }
 
 .sub-menu__list-link {
@@ -486,6 +487,8 @@ ul.sub-menu__list.show {
   opacity: 0;
   visibility: hidden;
   color: var(--black);
+  -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.2));
 }
 
 .select-language .select-language__list.show {
@@ -1442,6 +1445,11 @@ ul.sub-menu__list.show {
   gap: 20px;
 }
 
+.video-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .video-block {
   max-width: 278px;
   min-width: 278px;
@@ -1644,6 +1652,7 @@ div.mixitup-control-active > p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: end;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -1653,10 +1662,15 @@ div.mixitup-control-active > p {
   margin-right: auto;
 }
 
-.programs__content-nav button {
-  padding: 0 20px;
-  padding-bottom: 10px;
+.content-nav__wrapper {
+  position: relative;
+  height: fit-content;
   border-bottom: 2px solid var(--lightGray);
+}
+
+.programs__content-nav button {
+  padding: 0 20px 10px;
+  /* padding-bottom: 10px; */
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1664,17 +1678,27 @@ div.mixitup-control-active > p {
 }
 
 .programs__content-nav button.active {
-  border-color: var(--forestGreen);
+  /* border-color: var(--forestGreen); */
   color: var(--black);
+  font-weight: 600;
 }
 
 .programs__content-nav button:hover {
   color: var(--black);
 }
 
-.programs__content-nav button:focus {
-  color: var(--black);
+.border-btn {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: green;
+  bottom: -2px;
+  transition: all 0.3s ease-in-out;
 }
+
+/* .programs__content-nav button:focus {
+  color: var(--black);
+} */
 
 .program__map {
   height: 1150px;
@@ -1706,7 +1730,7 @@ div.mixitup-control-active > p {
   place-items: center;
   width: 55px;
   height: 55px;
-  border: 1px solid var(--forestGreen);
+  border: 2px solid var(--forestGreen);
   border-radius: 50%;
 }
 
@@ -1727,9 +1751,9 @@ div.mixitup-control-active > p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
+  /* -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center; */
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 30px;
@@ -2169,7 +2193,7 @@ ul.social__list {
   }
   .programs__content-nav button {
     font-size: 14px;
-    padding: 0 5px;
+    padding: 0 5px 10px;
   }
   .programs__content-nav .program__help-btn {
     padding: 17px 10px;

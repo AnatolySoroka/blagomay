@@ -11,6 +11,7 @@ const refs = {
   contentTitle: document.querySelector('.programs__content-title h2'),
   navListBtn: document.querySelector('.content-nav__list'),
   navMapBtn: document.querySelector('.content-nav__map'),
+  borderBtn: document.querySelector('.border-btn'),
   programsMap: document.querySelector('.program__map'),
   programsList: document.querySelector('.programs__list'),
   filterItem: document.querySelectorAll('.filter__item'),
@@ -18,6 +19,24 @@ const refs = {
 };
 
 
+// получаем текущий путь
+const path = window.location.pathname;
+
+// выбираем все элементы меню
+const menuItems = document.querySelectorAll('.menu__list-item');
+
+// перебираем все элементы меню
+menuItems.forEach(item => {
+  // получаем ссылку элемента меню
+  const link = item.querySelector('a');
+
+  // если ссылка соответствует текущему пути, то добавляем класс "link"
+  if (link.getAttribute('href') === path) {
+    link.classList.add('link');
+  } else {
+    link.classList.remove('link');
+  }
+});
 
 
 // video init
@@ -244,32 +263,70 @@ var mixer = mixitup('#programs__list', {
           const newTitle = activeBtn.toLowerCase();
           const titleIcon = item.querySelector('.mixitup-control-active button').innerHTML;
           refs.contentTitle.innerHTML = `<div class="wrapper-icon">${titleIcon}</div>` + newTitle[0].toUpperCase() + newTitle.slice(1);
+          // item.addEventListener('click', () => {
+          //   if (item.classList.contains('mixitup-control-active')) {
+          //     item.classList.toggle('mixitup-control-active');
+          //     refs.contentTitle.innerHTML = 'Всі активні програми';
+          //     mixer.filter('all');
+          //   }
+          // })
         }
       })
     }
   }
 });
 
+let prevBtn = null;
+
+// добавляем обработчик клика на каждую кнопку
+refs.filterItem.forEach(function (button) {
+  button.addEventListener('click', function () {
+
+    // если это первый клик на кнопке, просто сортируем элементы
+    if (prevBtn === null || prevBtn !== this) {
+      mixer.filter(this.getAttribute('data-filter'));
+      prevBtn = this;
+    }
+    // если кнопка была уже выбрана, сбрасываем фильтр
+    else {
+      mixer.filter('all');
+      refs.contentTitle.innerHTML = 'Всі активні програми';
+      prevBtn = null;
+    }
+  });
+});
+
+
 refs.resetBtn.addEventListener('click', () => {
   refs.contentTitle.innerHTML = 'Всі активні програми';
 })
 
+/////
+refs.navListBtn.addEventListener('click', () => {
+  refs.borderBtn.style.left = '0';
+});
+
+refs.navMapBtn.addEventListener('click', () => {
+  refs.borderBtn.style.left = refs.navMapBtn.offsetLeft + 'px';
+});
+
+
 // news resize
-const list = document.querySelector(".news__list");
+// const list = document.querySelector(".news__list");
 
-function resize() {
-  const width = window.innerWidth;
-  const itemsToShow = width < 931 ? 6 : 12;
-  const items = list.querySelectorAll(".news__list-item");
-  for (let i = 0; i < items.length; i++) {
-    if (i < itemsToShow) {
-      items[i].style.display = "block";
-    } else {
-      items[i].style.display = "none";
-    }
-  }
-}
+// function resize() {
+//   const width = window.innerWidth;
+//   const itemsToShow = width < 931 ? 6 : 12;
+//   const items = list.querySelectorAll(".news__list-item");
+//   for (let i = 0; i < items.length; i++) {
+//     if (i < itemsToShow) {
+//       items[i].style.display = "block";
+//     } else {
+//       items[i].style.display = "none";
+//     }
+//   }
+// }
 
-resize();
-window.addEventListener("resize", resize);
+// resize();
+// window.addEventListener("resize", resize);
 
