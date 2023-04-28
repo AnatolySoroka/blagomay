@@ -174,19 +174,18 @@ $(document).ready(function () {
 // partners slider
 $(document).ready(function () {
   $(".partners__slider").slick({
-    centerMode: true,
     dots: true,
     centerPadding: "0px",
     rows: 2,
     slidesToShow: 5,
-    slidesToScroll: 10,
+    slidesToScroll: 5,
     autoplay: true,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 4,
         }
       },
       {
@@ -200,7 +199,7 @@ $(document).ready(function () {
         breakpoint: 840,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           arrows: false,
         }
       }
@@ -211,18 +210,18 @@ $(document).ready(function () {
 // charity slider
 $(document).ready(function () {
   $(".charity__slider").slick({
-    centerMode: true,
     dots: true,
     centerPadding: "0px",
     rows: 3,
     slidesToShow: 5,
+    slidesToScroll: 5,
     autoplay: true,
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 4,
         }
       },
       {
@@ -236,7 +235,7 @@ $(document).ready(function () {
         breakpoint: 840,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           arrows: false,
         }
       }
