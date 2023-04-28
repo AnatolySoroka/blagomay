@@ -608,6 +608,7 @@ ul.sub-menu__list.show {
 /* HERO SECTION */
 
 .hero {
+  padding-top: 65px;
   background-color: var(--lightGray);
 }
 
@@ -1289,7 +1290,7 @@ ul.sub-menu__list.show {
 /* PROGRAM SECTION */
 
 .program {
-  padding: 60px 0;
+  padding: 105px 0 60px;
 }
 
 .program__wrapper {
