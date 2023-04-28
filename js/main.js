@@ -21,7 +21,7 @@ const refs = {
 
 // получаем текущий путь
 const path = window.location.pathname;
-const curUrl = '/' + path.split('/').pop();
+const curUrl = '/' + 'templates' + '/' + path.split('/').pop();
 
 // выбираем все элементы меню
 const menuItems = document.querySelectorAll('.menu__list-item');
