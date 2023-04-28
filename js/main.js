@@ -179,7 +179,7 @@ $(document).ready(function () {
     centerPadding: "0px",
     rows: 2,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 10,
     autoplay: true,
     responsive: [
       {
@@ -244,6 +244,38 @@ $(document).ready(function () {
   });
 });
 
+// news resize
+const itemsToShow = 6; // кількість елементів, які ми хочемо показати
+
+function hideItems() {
+  const allItems = document.querySelectorAll('.news__list-item'); // отримуємо всі елементи
+  for (let i = itemsToShow; i < allItems.length; i++) {
+    allItems[i].style.display = 'none'; // ховаємо елементи, які не мають бути показані
+  }
+}
+
+function showItems() {
+  const allItems = document.querySelectorAll('.news__list-item'); // отримуємо всі елементи
+  for (let i = itemsToShow; i < allItems.length; i++) {
+    allItems[i].style.display = 'block'; // показуємо елементи, які повинні бути показані
+  }
+}
+
+// перевірка розміру екрану при завантаженні сторінки і під час зміни розміру вікна
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 768) {
+    hideItems(); // ховаємо елементи, які не мають бути показані
+  } else {
+    showItems(); // показуємо елементи, які повинні бути показані
+  }
+});
+
+// виклик функції при завантаженні сторінки
+if (window.innerWidth < 768) {
+  hideItems(); // ховаємо елементи, які не мають бути показані
+}
+
+
 
 // FILTER/
 if (refs.navListBtn.classList.contains('active')) {
@@ -266,7 +298,6 @@ refs.navMapBtn.addEventListener('click', () => {
   refs.programsList.style.display = 'none';
   refs.programsMap.style.display = 'block';
 })
-
 
 // filter miItUp lpugin
 var mixer = mixitup('#programs__list', {
@@ -307,7 +338,8 @@ refs.filterItem.forEach(function (button) {
 
 refs.resetBtn.addEventListener('click', () => {
   refs.contentTitle.innerHTML = 'Всі активні програми';
-})
+});
+
 
 /////
 refs.navListBtn.addEventListener('click', () => {
@@ -319,22 +351,6 @@ refs.navMapBtn.addEventListener('click', () => {
 });
 
 
-// news resize
-// const list = document.querySelector(".news__list");
 
-// function resize() {
-//   const width = window.innerWidth;
-//   const itemsToShow = width < 931 ? 6 : 12;
-//   const items = list.querySelectorAll(".news__list-item");
-//   for (let i = 0; i < items.length; i++) {
-//     if (i < itemsToShow) {
-//       items[i].style.display = "block";
-//     } else {
-//       items[i].style.display = "none";
-//     }
-//   }
-// }
 
-// resize();
-// window.addEventListener("resize", resize);
 
