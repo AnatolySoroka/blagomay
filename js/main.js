@@ -45,7 +45,7 @@ subMenuItems.forEach(item => {
   // // получаем ссылку элемента меню
   const link = item.querySelector('a');
   // // если ссылка соответствует текущему пути, то добавляем класс "link"
-  if (link.getAttribute('href') === path) {
+  if (link.getAttribute('href') === curUrl) {
     link.classList.add('link');
   } else {
     link.classList.remove('link');
