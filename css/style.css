@@ -886,7 +886,7 @@ ul.sub-menu__list.show {
 
 .map iframe {
   width: 100%;
-  height: 1070px;
+  height: 990px;
 }
 
 /* ACHIEVEMENT SECTION */
@@ -1785,7 +1785,7 @@ div.mixitup-control-active > p {
 } */
 
 .program__map {
-  height: 1150px;
+  height: 990px;
   width: 100%;
   transition: none;
   -webkit-transition: none;
@@ -2197,7 +2197,10 @@ ul.social__list {
   }
   .map iframe {
     width: 100%;
-    height: 1230px;
+    height: 1270px;
+  }
+  .program__map {
+    height: 1265px;
   }
 }
 
@@ -2233,6 +2236,9 @@ ul.social__list {
     margin-top: 9px;
   }
   .map iframe {
+    height: 1570px;
+  }
+  .program__map {
     height: 1570px;
   }
 }
@@ -2299,7 +2305,10 @@ ul.social__list {
     width: 120px;
   }
   .map iframe {
-    height: 1580px;
+    height: 1675px;
+  }
+  .program__map {
+    height: 1675px;
   }
   .programs__content-title h2 .wrapper-icon {
     width: 42px;
@@ -2482,7 +2491,7 @@ ul.social__list {
     padding: 40px 0;
   }
   .map iframe {
-    height: 1910px;
+    height: 1680px;
   }
   .partners__logo {
     margin: 0 auto;
