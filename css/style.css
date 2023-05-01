@@ -1560,6 +1560,20 @@ ul.sub-menu__list.show {
   padding-bottom: 20px;
 }
 
+.video-container::-webkit-scrollbar {
+  height: 4px;
+  background-color: rgb(242, 242, 242);
+}
+
+.video-container::-webkit-scrollbar-thumb {
+  background-color: rgb(187, 187, 187);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
 .video-block {
   max-width: 278px;
   min-width: 278px;
