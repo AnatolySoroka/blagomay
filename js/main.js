@@ -167,7 +167,7 @@ $(document).ready(function () {
     adaptiveHeight: true,
     adaptiveWidth: true,
     centerPadding: "0px",
-    autoplay: true,
+    // autoplay: true,
   });
 });
 
