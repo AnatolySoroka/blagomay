@@ -697,7 +697,9 @@ ul.sub-menu__list.show {
 }
 
 .offer {
-  margin-top: 210px;
+  position: absolute;
+  bottom: 154px;
+  /* margin-top: 210px; */
 }
 
 .offer__title {
@@ -1911,6 +1913,8 @@ div.mixitup-control-active > p {
 }
 
 .program__list-item {
+  display: flex;
+  flex-direction: column;
   max-width: 380px;
   border-radius: 12px;
   background-color: var(--white);
@@ -1961,10 +1965,24 @@ div.mixitup-control-active > p {
 }
 
 .program__item-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 20px;
 }
 
+.program__item-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .program__item-title h6 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Кількість рядків, яку ви хочете показати */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -2389,7 +2407,9 @@ ul.social__list {
 
 @media (max-width: 425px) {
   .offer {
-    margin-top: 194px;
+    bottom: 253px;
+    width: 90%;
+    /* margin-top: 194px; */
   }
   .offer__title {
     max-width: 250px;
