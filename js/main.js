@@ -18,6 +18,18 @@ const refs = {
   resetBtn: document.querySelector('.reset-filter'),
 };
 
+// LOADER
+const mask = document.querySelector('.mask');
+window.addEventListener('load', () => {
+  mask.classList.add('hide');
+  if (mask.classList.contains('hide')) {
+    document.body.style.overflowY = 'visible';
+  }
+  setTimeout(() => {
+    mask.remove();
+  }, 600)
+})
+
 
 // получаем текущий путь
 const path = window.location.pathname;

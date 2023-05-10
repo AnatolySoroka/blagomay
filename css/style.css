@@ -18,6 +18,7 @@ body {
 }
 
 body {
+  overflow-y: hidden;
   overflow-x: hidden;
   font-family: "Open Sans";
   color: var(--black);
@@ -57,6 +58,110 @@ button {
   outline: none;
   background-color: transparent;
   padding: 0;
+}
+
+/* LOADER */
+.mask {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  transition: 0.6s;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+
+.mask.hide {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -500;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.img-text {
+  position: relative;
+  display: inline-block;
+}
+
+.img-heart {
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  transform: translate(-50%, -2%);
+  z-index: -1;
+  -webkit-transform: translate(-50%, -2%);
+  -moz-transform: translate(-50%, -2%);
+  -ms-transform: translate(-50%, -2%);
+  -o-transform: translate(-50%, -2%);
+}
+
+.img-heart svg {
+  animation-name: img-heart;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.img-heart svg path {
+  animation-name: img-heart-fill;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loader img {
+  margin-left: 10px;
+  margin-bottom: 7px;
+  width: 55px;
+  height: 30px;
+  display: inline-block;
+}
+
+@keyframes img-heart {
+  0% {
+    width: 31px;
+    height: 29px;
+  }
+  50% {
+    width: 59px;
+    height: 57px;
+    transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -o-transform: translateY(-25%);
+  }
+  60% {
+    width: 31px;
+    height: 29px;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+}
+
+@keyframes img-heart-fill {
+  0% {
+    fill: #3dad36;
+  }
+  50% {
+    fill: #7feb78;
+  }
+  60% {
+    fill: #3dad36;
+  }
 }
 
 /* HEADER SECTION */
