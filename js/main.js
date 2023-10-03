@@ -179,7 +179,8 @@ $(document).ready(function () {
     adaptiveHeight: true,
     adaptiveWidth: true,
     centerPadding: "0px",
-    // autoplay: true,
+    lazyLoad: 'ondemand',
+    autoplay: true,
   });
 });
 

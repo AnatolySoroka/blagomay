@@ -797,8 +797,8 @@ ul.sub-menu__list.show {
   z-index: -1;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: top;
-  object-position: top;
+  -o-object-position: center center;
+  object-position: center center;
 }
 
 .offer {
@@ -2512,9 +2512,12 @@ ul.social__list {
 
 @media (max-width: 425px) {
   .offer {
-    bottom: 253px;
+    bottom: 160px;
     width: 90%;
     /* margin-top: 194px; */
+  }
+  .slider__item {
+    height: 100vh;
   }
   .offer__title {
     max-width: 250px;
