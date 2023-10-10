@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+// Забороняєм у інпуті писати все крім цифр ПОЧАТОК
 // Отримуємо посилання на вхідне поле
 var inputField = document.getElementById("currency-input");
         
@@ -12,9 +14,9 @@ inputField.addEventListener("input", function(event) {
     // Оновлюємо вміст вхідного поля на очищений рядок
     inputField.value = numericValue;
 });
+// Забороняєм у інпуті писати все крім цифр КІНЕЦЬ
 
 
-document.addEventListener("DOMContentLoaded", function () {
   const oneTimeBtn = document.getElementById("one-time-btn");
   const regularBtn = document.getElementById("regular-btn");
   const regularPaymentBlock = document.querySelector(".regular-payment");
@@ -37,8 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // 
   const buttons = document.querySelectorAll('.bank-transfer__btn');
   const contents = document.querySelectorAll('.bank-transfer__card-content');
-
-  console.log(buttons)
 
   buttons.forEach((button) => {
     button.addEventListener('click', function () {
