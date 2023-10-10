@@ -1,3 +1,272 @@
+// Отримуємо посилання на вхідне поле
+var inputField = document.getElementById("currency-input");
+        
+// Додаємо обробник події "input" до поля
+inputField.addEventListener("input", function(event) {
+    // Отримуємо текст з вхідного поля
+    var inputValue = inputField.value;
+    
+    // Замінюємо всі символи, які не є цифрами, на порожній рядок
+    var numericValue = inputValue.replace(/[^0-9]/g, "");
+    
+    // Оновлюємо вміст вхідного поля на очищений рядок
+    inputField.value = numericValue;
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const oneTimeBtn = document.getElementById("one-time-btn");
+  const regularBtn = document.getElementById("regular-btn");
+  const regularPaymentBlock = document.querySelector(".regular-payment");
+
+  // Приховувати блок при завантаженні сторінки
+  regularPaymentBlock.style.display = "none";
+
+  // Додати обробник кліку на кнопку "Регулярна допомога"
+  regularBtn.addEventListener("click", function () {
+    regularPaymentBlock.style.display = "block";
+  });
+
+  // Додати обробник кліку на кнопку "Одноразова допомога"
+  oneTimeBtn.addEventListener("click", function () {
+    regularPaymentBlock.style.display = "none";
+  });
+
+  // 
+  // 
+  // 
+  const buttons = document.querySelectorAll('.bank-transfer__btn');
+  const contents = document.querySelectorAll('.bank-transfer__card-content');
+
+  console.log(buttons)
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', function () {
+      // Знайдемо кнопку, яку клікнули
+      const target = button.getAttribute('data-target');
+
+      // Приховуємо всі блоки контенту
+      contents.forEach((content) => {
+        content.classList.remove('active');
+      });
+
+      // Показуємо відповідний блок контенту
+      document.querySelector(`.bank-transfer__card-content.${target}`).classList.add('active');
+
+      // Відзначаємо активну кнопку
+      buttons.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+    });
+  });
+
+  // Показуємо початковий блок контенту (UAH)
+  document.querySelector('.bank-transfer__card-content.uah').classList.add('active');
+
+
+
+  //Обробник для всіх кнопок копіювання ПОЧАТОК
+  // Отримуємо всі кнопки копіювання і повідомлення
+const copyButtons = document.querySelectorAll('.copy-btn');
+const notification = document.getElementById('notification');
+
+// Додаємо обробник кліку на кожну кнопку копіювання
+copyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Отримуємо сусідній <span> для копіювання
+        const spanToCopy = button.previousElementSibling;
+
+        // Створюємо текстовий об'єкт для копіювання
+        const textToCopy = spanToCopy.textContent;
+
+        // Створюємо тимчасовий <textarea> для копіювання тексту
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = textToCopy;
+        document.body.appendChild(tempTextarea);
+
+        // Вибираємо текст у <textarea>
+        tempTextarea.select();
+        tempTextarea.setSelectionRange(0, 99999);
+
+        // Копіюємо текст у буфер обміну
+        document.execCommand('copy');
+
+        // Видаляємо тимчасовий <textarea>
+        document.body.removeChild(tempTextarea);
+
+        // Показуємо повідомлення про копіювання
+        notification.style.display = 'flex';
+
+        // Через 2 секунди ховаємо повідомлення
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 2000);
+    });
+});
+//Обробник для всіх кнопок копіювання КІНЕЦЬ
+
+// Обробник для кнопки копіювання всіх даних у секції ПОЧАТОК
+const copyAllDataButtons = document.querySelectorAll('.copy-all-data');
+
+copyAllDataButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Отримуємо батьківський елемент секції
+        const section = button.closest('.bank-tranfer__privat');
+
+        // Знаходимо всі <span> у цій секції
+        const spansToCopy = section.querySelectorAll('span');
+
+        // Збираємо всі тексти в одну рядок через кому та пробіл
+        const textToCopy = Array.from(spansToCopy).map(span => span.textContent).join('\n');
+
+        // Створюємо тимчасовий <textarea> для копіювання тексту
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = textToCopy;
+        document.body.appendChild(tempTextarea);
+
+        // Вибираємо текст у <textarea>
+        tempTextarea.select();
+        tempTextarea.setSelectionRange(0, 99999);
+
+        // Копіюємо текст у буфер обміну
+        document.execCommand('copy');
+
+        // Видаляємо тимчасовий <textarea>
+        document.body.removeChild(tempTextarea);
+
+        // Показуємо повідомлення про копіювання
+        // notification.style.display = 'flex';
+
+        // Через 2 секунди ховаємо повідомлення
+        // setTimeout(() => {
+        //     notification.style.display = 'none';
+        // }, 2000);
+        button.innerHTML = `Данні скопійовані <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.3508 16.8085L6.89027 13.348C6.48293 12.9406 6.48293 12.2802 6.89027 11.8728C7.29762 11.4655 7.95805 11.4655 8.3654 11.8728L11.0698 14.5772L16.6594 7.38949C17.038 6.90257 17.7578 6.85774 18.1939 7.2939C18.5654 7.66536 18.5961 8.25747 18.2649 8.66531L11.7107 16.7381C11.368 17.1602 10.7353 17.193 10.3508 16.8085Z" fill="#FFCB08"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 21.1667C17.5626 21.1667 21.6667 17.0626 21.6667 12C21.6667 6.93739 17.5626 2.83333 12.5 2.83333C7.43739 2.83333 3.33333 6.93739 3.33333 12C3.33333 17.0626 7.43739 21.1667 12.5 21.1667ZM12.5 23C18.5751 23 23.5 18.0751 23.5 12C23.5 5.92487 18.5751 1 12.5 1C6.42487 1 1.5 5.92487 1.5 12C1.5 18.0751 6.42487 23 12.5 23Z" fill="#FFCB08"/>
+        </svg>
+        `
+        setTimeout(() => {
+          button.innerHTML = `Скопіювати всі дані<svg
+          xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+          viewBox="0 0 22 22" fill="none">
+          <g clip-path="url(#clip0_1542_2660)">
+              <path
+                  d="M14.6668 0.916656H3.66683C2.65391 0.916656 1.8335 1.73707 1.8335 2.74999V15.5833H3.66683V2.74999H14.6668V0.916656ZM17.4168 4.58332H7.3335C6.32058 4.58332 5.50016 5.40374 5.50016 6.41666V19.25C5.50016 20.2629 6.32058 21.0833 7.3335 21.0833H17.4168C18.4298 21.0833 19.2502 20.2629 19.2502 19.25V6.41666C19.2502 5.40374 18.4298 4.58332 17.4168 4.58332ZM17.4168 19.25H7.3335V6.41666H17.4168V19.25Z"
+                  fill="#FFCB08" />
+          </g>
+          <defs>
+              <clipPath id="clip0_1542_2660">
+                  <rect width="22" height="22" fill="white" />
+              </clipPath>
+          </defs>
+      </svg>`
+        }, 2000);
+    });
+});
+// Обробник для кнопки копіювання всіх даних у секції КІНЕЦЬ
+});
+
+
+
+const buttonContainers = document.querySelectorAll('.nav-buttons');
+
+buttonContainers.forEach((container) => {
+  const buttons = container.querySelectorAll('.nav-button');
+  const navLine = container.querySelector('.nav-line');
+
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      // Видаляємо клас "active" у всіх кнопок в поточному контейнері
+      buttons.forEach((btn) => btn.classList.remove('active'));
+
+      // Додаємо клас "active" обраній кнопці
+      button.classList.add('active');
+
+      // Зміщуємо лінію на позицію активної кнопки та встановлюємо ширину
+      const buttonLeft = button.getBoundingClientRect().left;
+      const containerLeft = container.getBoundingClientRect().left;
+      const buttonWidth = button.getBoundingClientRect().width;
+      navLine.style.transform = `translateX(${buttonLeft - containerLeft}px)`;
+      navLine.style.width = `${buttonWidth}px`;
+    });
+  });
+
+  // При завантаженні сторінки, робимо першу кнопку активною і встановлюємо початкові значення лінії
+  const firstButton = buttons[0];
+  const firstButtonLeft = firstButton.getBoundingClientRect().left;
+  const containerLeft = container.getBoundingClientRect().left;
+  const firstButtonWidth = firstButton.getBoundingClientRect().width;
+  navLine.style.transform = `translateX(${firstButtonLeft - containerLeft}px)`;
+  navLine.style.width = `${firstButtonWidth}px`;
+  firstButton.classList.add('active');
+});
+
+
+// JavaScript для плавної прокрутки до якорів
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.getBoundingClientRect().top + window.pageYOffset - 60,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
+
+
+
+// accordion
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+
+
+for (i = 0; i < acc.length; i++) {
+  // console.log(acc[i])
+  acc[i].addEventListener("click", function () {
+    let panel = this.nextElementSibling;
+    
+    // Перевіряємо, чи акордеон відкритий
+    let isOpen = this.classList.contains("active");
+
+    // Закриваємо всі акордеони перед відкриттям поточного
+    // for (let j = 0; j < acc.length; j++) {
+    //   acc[j].classList.remove("active");
+    //   let otherPanel = acc[j].nextElementSibling;
+    //   otherPanel.style.maxHeight = null;
+    // }
+
+    function updateHeight(el) {
+      el.classList.add("active");
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+    // Відкриваємо або закриваємо поточний акордеон
+    if (!isOpen) {
+      updateHeight(this);
+      // this.classList.add("active");
+      // panel.style.maxHeight = panel.scrollHeight + "px";
+    } else {
+      this.classList.remove('active');
+      this.nextElementSibling.style.maxHeight = null;
+    }
+  });
+}
+
+
+
+
+
 const refs = {
   dropdownToggle: document.querySelectorAll(".has-sub"),
   dropdownMenu: document.querySelector(".sub-menu__list"),
@@ -117,7 +386,7 @@ function showMobileMenu() {
   if (refs.mobileMenu.classList.contains("show")) {
     document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = "";
+    document.body.style.overflow = "visible";
   }
 }
 
