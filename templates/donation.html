@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css'>
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -152,7 +153,6 @@
                                 <rect y="10" width="28" height="2" rx="1" fill="black" />
                                 <rect y="20" width="28" height="2" rx="1" fill="black" />
                             </svg>
-                            <!-- <span class="burger-icon"></span> -->
                         </button>
                         <a class="user-login" href="#"><svg width="31" height="30" viewBox="0 0 31 30" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -228,7 +228,7 @@
                                 <li class="menu__list-item">
                                     <a class="menu__list-link" href="#">Вхід</a>
                                 </li>
-                                <a class="help__btn help__btn-mobile" href="#">Допомогти</a>
+                                <a class="help__btn help__btn-mobile" href="../templates/donation.html">Допомогти</a>
                             </ul>
                         </nav>
                     </div>
@@ -478,9 +478,12 @@
                         <h2 class="bank-transfer__title">Банківський переказ</h2>
                         <div class="bank-transfer__card">
                             <div class="bank-transfer__card-top nav-buttons">
-                                <button class="nav-button bank-transfer__btn" data-target="uah"><span>Переказ у </span>UAH</button>
-                                <button class="nav-button bank-transfer__btn" data-target="usd"><span>Переказ у</span> USD</button>
-                                <button class="nav-button bank-transfer__btn" data-target="eur"><span>Переказ у</span> EUR</button>
+                                <button class="nav-button bank-transfer__btn" data-target="uah"><span>Переказ у
+                                    </span>UAH</button>
+                                <button class="nav-button bank-transfer__btn" data-target="usd"><span>Переказ у</span>
+                                    USD</button>
+                                <button class="nav-button bank-transfer__btn" data-target="eur"><span>Переказ у</span>
+                                    EUR</button>
                                 <div class="nav-line"></div>
                             </div>
                             <div class="bank-transfer__card-content active uah">
@@ -705,7 +708,687 @@
                         <!-- <div class="container"> -->
                         <h2 class="reoprting__title">Звітність</h2>
                         <div class="accordion__wrapper">
-                            <button class="accordion">Фінансова звітність<svg width="40" height="41" viewBox="0 0 40 41"
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Фінансова звітність
+                                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" fill="white" />
+                                                <path
+                                                    d="M23.106 20.5046L16.8004 26.8117C16.4164 27.1958 16.4164 27.8278 16.8004 28.2119C17.1844 28.596 17.8162 28.596 18.2003 28.2119L25.212 21.1985C25.596 20.8144 25.596 20.1825 25.212 19.7984L18.2003 12.785C18.0021 12.5867 17.7543 12.5 17.4942 12.5C17.234 12.5 16.9862 12.5991 16.788 12.785C16.404 13.1691 16.404 13.8011 16.788 14.1852L23.106 20.5046Z"
+                                                    fill="#6B6B6B" />
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" stroke="#6B6B6B"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            <div class="accordion" id="sub-accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingOne">
+                                                        <button class="accordion-button sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseOne" aria-expanded="true"
+                                                            aria-controls="collapseOne">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingOne"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item">
+                                                                <a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingTwo">
+                                                        <button class="accordion-button collapsed sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseTwo" aria-expanded="false"
+                                                            aria-controls="sub-collapseTwo">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseTwo" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingTwo"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Річні звіти<svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" fill="white" />
+                                                <path
+                                                    d="M23.106 20.5046L16.8004 26.8117C16.4164 27.1958 16.4164 27.8278 16.8004 28.2119C17.1844 28.596 17.8162 28.596 18.2003 28.2119L25.212 21.1985C25.596 20.8144 25.596 20.1825 25.212 19.7984L18.2003 12.785C18.0021 12.5867 17.7543 12.5 17.4942 12.5C17.234 12.5 16.9862 12.5991 16.788 12.785C16.404 13.1691 16.404 13.8011 16.788 14.1852L23.106 20.5046Z"
+                                                    fill="#6B6B6B" />
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" stroke="#6B6B6B"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="accordion" id="sub-accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingThree">
+                                                        <button class="accordion-button sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseThree" aria-expanded="true"
+                                                            aria-controls="collapseThree">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseThree" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingThree"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item">
+                                                                <a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingFour">
+                                                        <button class="accordion-button collapsed sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseFour" aria-expanded="false"
+                                                            aria-controls="sub-collapseFour">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseFour" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingFour"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Щомісячні звіти<svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" fill="white" />
+                                                <path
+                                                    d="M23.106 20.5046L16.8004 26.8117C16.4164 27.1958 16.4164 27.8278 16.8004 28.2119C17.1844 28.596 17.8162 28.596 18.2003 28.2119L25.212 21.1985C25.596 20.8144 25.596 20.1825 25.212 19.7984L18.2003 12.785C18.0021 12.5867 17.7543 12.5 17.4942 12.5C17.234 12.5 16.9862 12.5991 16.788 12.785C16.404 13.1691 16.404 13.8011 16.788 14.1852L23.106 20.5046Z"
+                                                    fill="#6B6B6B" />
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" stroke="#6B6B6B"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="accordion" id="sub-accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingFive">
+                                                        <button class="accordion-button sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseFive" aria-expanded="true"
+                                                            aria-controls="collapseFive">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseFive" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingFive"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item">
+                                                                <a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingTwo">
+                                                        <button class="accordion-button collapsed sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseTwo" aria-expanded="false"
+                                                            aria-controls="sub-collapseTwo">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseTwo" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingTwo"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            Аудиторські звіти<svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" fill="white" />
+                                                <path
+                                                    d="M23.106 20.5046L16.8004 26.8117C16.4164 27.1958 16.4164 27.8278 16.8004 28.2119C17.1844 28.596 17.8162 28.596 18.2003 28.2119L25.212 21.1985C25.596 20.8144 25.596 20.1825 25.212 19.7984L18.2003 12.785C18.0021 12.5867 17.7543 12.5 17.4942 12.5C17.234 12.5 16.9862 12.5991 16.788 12.785C16.404 13.1691 16.404 13.8011 16.788 14.1852L23.106 20.5046Z"
+                                                    fill="#6B6B6B" />
+                                                <rect x="39" y="39.5" width="38" height="38" rx="19"
+                                                    transform="rotate(-180 39 39.5)" stroke="#6B6B6B"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="accordion" id="sub-accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingOne">
+                                                        <button class="accordion-button sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseOne" aria-expanded="true"
+                                                            aria-controls="collapseOne">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingOne"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item">
+                                                                <a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="sub-headingTwo">
+                                                        <button class="accordion-button collapsed sub-accordion-button"
+                                                            type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#sub-collapseTwo" aria-expanded="false"
+                                                            aria-controls="sub-collapseTwo">
+                                                            2022 рік<svg style="margin-right:12px;" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_396_324)">
+                                                                    <path
+                                                                        d="M4.90277 14.9442C5.08274 14.9442 5.25018 14.8773 5.3814 14.7461L11.6488 8.47868C11.913 8.21452 11.913 7.78557 11.6488 7.52141L5.3814 1.25397C5.11725 0.989822 4.68829 0.989822 4.42414 1.25397C4.15999 1.51812 4.15999 1.94708 4.42414 2.21123L10.213 8.00005L4.42414 13.7889C4.15999 14.053 4.15999 14.482 4.42414 14.7461C4.55536 14.8773 4.7228 14.9442 4.90277 14.9442Z"
+                                                                        fill="#008734" stroke="#008734"
+                                                                        stroke-width="0.4" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_396_324">
+                                                                        <rect width="15" height="15" fill="white"
+                                                                            transform="translate(0.542297 0.5)" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="sub-collapseTwo" class="accordion-collapse collapse"
+                                                        aria-labelledby="sub-headingTwo"
+                                                        data-bs-parent="#sub-accordionExample">
+                                                        <div class="accordion-body sub-accordion-body">
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="accordion-body__item"><a href="#">
+                                                                    <img src="../img/excel-logo.svg" alt="excel logo">
+                                                                    <p>Звіт січень-грудень 2022 рік</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="accordion">Фінансова звітність<svg width="40" height="41" viewBox="0 0 40 41"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="39" y="39.5" width="38" height="38" rx="19"
                                         transform="rotate(-180 39 39.5)" fill="white" />
@@ -793,8 +1476,8 @@
                                     ullamco
                                     laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
-                        </div>
-                        <!-- </div> -->
+                        </div> -->
+                            <!-- </div> -->
                     </section>
                 </div>
             </div>
@@ -1023,6 +1706,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="../js/slick.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js'></script>
     <script src="../js/main.js"></script>
     <script>
         refs.oneTimeAssistanceBtn.addEventListener('click', () => {
