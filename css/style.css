@@ -2461,7 +2461,8 @@ ul.social__list {
 .bank-transfer__title,
 .transfer-abroad__title,
 .pay-crypto__title,
-.other-patments__title {
+.other-patments__title,
+.reoprting__title {
   font-family: 'Open Sans';
   font-size: 28px;
   font-style: normal;
@@ -2477,30 +2478,6 @@ ul.social__list {
   padding: 20px;
   max-width: 712px;
 }
-
-/* .donation-card__top {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 40px;
-  border-bottom: 2px solid var(--lightGray);
-} */
-
-/* .donation-card__top button {
-  padding: 16px 0;
-  width: 50%;
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  color: #6B6B6B;
-} */
-
-/* .donation-card__top button.active {
-  border-bottom: 2px solid #008734;
-  color: #000;
-} */
 
 .donation-card__price {
   position: relative;
@@ -2532,55 +2509,29 @@ ul.social__list {
 .enter-amount input {
   border-radius: 12px;
   background: #F4F4F4;
-  padding: 22px;
+  padding: 22.5px 22px;
   border: none;
   font-family: 'Open Sans';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  outline: none;
+  outline-color: #C4C4C4;
   width: 100%;
+  color: #6B6B6B;
 }
 
-.enter-amount input::-webkit-input-placeholder {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.enter-amount input::-moz-placeholder {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.enter-amount input:-ms-input-placeholder {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.enter-amount input::-ms-input-placeholder {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
+.enter-amount input::-webkit-input-placeholder,
+.enter-amount input::-moz-placeholder,
+.enter-amount input:-ms-input-placeholder,
+.enter-amount input::-ms-input-placeholder,
 .enter-amount input::placeholder {
   font-family: 'Open Sans';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #6B6B6B;
 }
 
 .radio__inner {
@@ -2754,31 +2705,22 @@ ul.social__list {
 .your-data-form__inputs div input {
   width: 100%;
   border: none;
-  padding: 10px 22px;
+  padding: 12.5px 22px;
   background-color: #f4f4f4;
   border-radius: 12px;
   font-size: 18px;
+  line-height: 24.51px;
   font-weight: 400;
-  outline: none;
-}
-
-.your-data-form__inputs div input::-webkit-input-placeholder {
+  outline-color: #C4C4C4;
   color: #6B6B6B;
 }
 
-.your-data-form__inputs div input::-moz-placeholder {
-  color: #6B6B6B;
-}
-
-.your-data-form__inputs div input:-ms-input-placeholder {
-  color: #6B6B6B;
-}
-
-.your-data-form__inputs div input::-ms-input-placeholder {
-  color: #6B6B6B;
-}
-
+.your-data-form__inputs div input::-webkit-input-placeholder,
+.your-data-form__inputs div input::-moz-placeholder,
+.your-data-form__inputs div input:-ms-input-placeholder,
+.your-data-form__inputs div input::-ms-input-placeholder,
 .your-data-form__inputs div input::placeholder {
+  font-size: 18;
   color: #6B6B6B;
 }
 
@@ -2809,7 +2751,7 @@ ul.social__list {
   position: absolute;
   width: 14px;
   height: 12px;
-  background-image: url('/img/check.svg');
+  background-image: url('../img/check.svg');
   background-repeat: no-repeat;
   background-size: contain;
   left: 50%;
@@ -2880,6 +2822,7 @@ ul.social__list {
 
 .nav-button {
   border: none;
+  border-bottom: 2px solid #ededed;
   background-color: transparent;
   cursor: pointer;
   padding: 16px 20px;
@@ -3085,11 +3028,29 @@ ul.social__list {
   flex-grow: 1;
 }
 
+.small-card p a {
+  color: var(--forestGreen);
+  font-weight: 600;
+}
+
+.small-card p span {
+  color: var(--forestGreen);
+}
+
 .small-card img {
+  position: relative;
   margin-bottom: 20px;
   max-height: 35px;
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.any-wallet-img::before {
+  content: 'Any wallet';
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 20px;
 }
 
 .pay-btn {
@@ -3109,6 +3070,7 @@ ul.social__list {
 
 .pay-btn:hover {
   background-color: #FFE609;
+  color: #000;
 }
 
 .pay-crypto,
@@ -3246,33 +3208,6 @@ ul.social__list {
   stroke: var(--forestGreen);
 }
 
-/* .accordion svg,
-.accordion.active svg rect {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.accordion.active svg {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.accordion.active svg path {
-  fill: var(--forestGreen);
-}
-
-.accordion.active svg rect {
-  stroke: var(--forestGreen);
-}
-
-.accordion.active:after {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-} */
-
 /* ACCORDION END */
 
 
@@ -3299,11 +3234,11 @@ ul.social__list {
   top: 0px;
 }
 
-.reoprting__title {
+/* .reoprting__title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
-}
+} */
 
 .donation__wrapper {
   position: relative;
@@ -3662,28 +3597,28 @@ ul.social__list {
   }
 
   .enter-amount input {
-    padding: 10px 22px;
+    padding: 14px 22px;
     font-size: 16px;
+    line-height: 21.79px;
   }
 
-  .enter-amount input::-webkit-input-placeholder {
-    font-size: 16px;
-  }
-
-  .enter-amount input::-moz-placeholder {
-    font-size: 16px;
-  }
-
-  .enter-amount input:-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .enter-amount input::-ms-input-placeholder {
-    font-size: 16px;
-  }
-
+  .enter-amount input::-webkit-input-placeholder,
+  .enter-amount input::-moz-placeholder,
+  .enter-amount input:-ms-input-placeholder,
+  .enter-amount input::-ms-input-placeholder,
   .enter-amount input::placeholder {
     font-size: 16px;
+  }
+
+  .your-data-form__inputs div input {
+    font-size: 16px;
+    line-height: 21.79px;
+    padding: 11.5px 22px;
+  }
+
+  .regular-payment__date input {
+    height: 45px;
+    padding: 12.5px 22px;
   }
 }
 
